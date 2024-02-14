@@ -1,10 +1,10 @@
 package net.gamingeinstein.cardcraft;
 
 import com.mojang.logging.LogUtils;
-import net.gamingeinstein.cardcraft.block.ModBlocks;
+import net.gamingeinstein.cardcraft.registries.ModBlocks;
 import net.gamingeinstein.cardcraft.config.CardCraftConfig;
-import net.gamingeinstein.cardcraft.item.ModItems;
-import net.gamingeinstein.cardcraft.item.ModCreativeModeTabs;
+import net.gamingeinstein.cardcraft.registries.ModCreativeModeTabs;
+import net.gamingeinstein.cardcraft.registries.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,12 +30,7 @@ public class CardCraft {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
-        //ModBlockEntities.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
-
-        //ModMenuTypes.register(modEventBus);
-        //ModRecipes.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -44,7 +39,7 @@ public class CardCraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            //MenuScreens.register(ModMenuTypes.XXX.get(), XXX::new);
+
         }
     }
 }

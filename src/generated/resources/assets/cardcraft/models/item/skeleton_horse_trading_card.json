@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cardcraft:item/skeleton_horse_trading_card"
+  }
+}

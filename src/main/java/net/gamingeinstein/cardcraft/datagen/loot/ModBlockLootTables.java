@@ -1,6 +1,6 @@
 package net.gamingeinstein.cardcraft.datagen.loot;
 
-import net.gamingeinstein.cardcraft.block.ModBlocks;
+import net.gamingeinstein.cardcraft.registries.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;

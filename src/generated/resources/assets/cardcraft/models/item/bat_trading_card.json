@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cardcraft:item/trading_card"
+    "layer0": "cardcraft:item/bat_trading_card"
   }
 }

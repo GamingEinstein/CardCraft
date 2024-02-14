@@ -1,8 +1,8 @@
-package net.gamingeinstein.cardcraft.block;
+package net.gamingeinstein.cardcraft.registries;
 
 import net.gamingeinstein.cardcraft.CardCraft;
 //import net.gamingeinstein.minequesttcg.block.custom.*
-import net.gamingeinstein.cardcraft.item.ModItems;
+import net.gamingeinstein.cardcraft.registries.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cardcraft:item/booster_pack"
+    "layer0": "cardcraft:item/base_trading_card"
   }
 }
