@@ -43,6 +43,6 @@ public class CardItem extends Item {
 
     @Override
     public boolean isFoil(ItemStack pStack) {
-        return IS_SHINY ? true : false;
+        return IS_SHINY;
     }
 }
