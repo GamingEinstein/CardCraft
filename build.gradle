@@ -44,6 +44,8 @@ minecraft {
 
         client {
             property 'forge.enabledGameTestNamespaces', mod_id
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
         }
 
         server {
@@ -81,12 +83,12 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
-    /*maven {
+    maven {
         url "https://www.cursemaven.com"
         content {
             includeGroup "curse.maven"
         }
-    }*/
+    }
 }
 
 dependencies {
@@ -99,7 +101,7 @@ dependencies {
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
     // Visit https://www.curseforge.com/minecraft/mc-mods/jade/files/all?filter-status=1&filter-game-version=2020709689%3A7498
     // to get the latest version's jade_id
-    //implementation fg.deobf("curse.maven:jade-324717:${jade_id}")
+    implementation fg.deobf("curse.maven:jade-324717:${jade_id}")
 }
 
 tasks.named('processResources', ProcessResources).configure {

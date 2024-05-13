@@ -21,47 +21,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.BASE_TRADING_CARD);
         simpleItem(ModItems.BASE_BOOSTER_PACK);
-
-        simpleItem(ModItems.WHITE_EYES_BOOSTER_PACK);
-        simpleItem(ModItems.ALEX_TRADING_CARD);
-        simpleItem(ModItems.BAT_TRADING_CARD);
-        simpleItem(ModItems.BLAZE_TRADING_CARD);
-        simpleItem(ModItems.CAT_TRADING_CARD);
-        simpleItem(ModItems.CAVE_SPIDER_TRADING_CARD);
-        simpleItem(ModItems.CHICKEN_TRADING_CARD);
-        simpleItem(ModItems.COD_TRADING_CARD);
-        simpleItem(ModItems.COW_TRADING_CARD);
-        simpleItem(ModItems.CREEPER_TRADING_CARD);
-        simpleItem(ModItems.DONKEY_TRADING_CARD);
-        simpleItem(ModItems.ENDERMAN_TRADING_CARD);
-        simpleItem(ModItems.ENDER_DRAGON_TRADING_CARD);
-        simpleItem(ModItems.GHAST_TRADING_CARD);
-        simpleItem(ModItems.HEROBRINE_TRADING_CARD);
-        simpleItem(ModItems.HORSE_TRADING_CARD);
-        simpleItem(ModItems.IRON_GOLEM_TRADING_CARD);
-        simpleItem(ModItems.MAGMA_CUBE_TRADING_CARD);
-        simpleItem(ModItems.MOOSHROOM_TRADING_CARD);
-        simpleItem(ModItems.MULE_TRADING_CARD);
-        simpleItem(ModItems.OCELOT_TRADING_CARD);
-        simpleItem(ModItems.PIG_TRADING_CARD);
-        simpleItem(ModItems.RABBIT_TRADING_CARD);
-        simpleItem(ModItems.SALMON_TRADING_CARD);
-        simpleItem(ModItems.SHEEP_TRADING_CARD);
-        simpleItem(ModItems.SILVERFISH_TRADING_CARD);
-        simpleItem(ModItems.SKELETON_TRADING_CARD);
-        simpleItem(ModItems.SKELETON_HORSE_TRADING_CARD);
-        simpleItem(ModItems.SLIME_TRADING_CARD);
-        simpleItem(ModItems.SNOW_GOLEM_TRADING_CARD);
-        simpleItem(ModItems.SPIDER_TRADING_CARD);
-        simpleItem(ModItems.SQUID_TRADING_CARD);
-        simpleItem(ModItems.STEVE_TRADING_CARD);
-        simpleItem(ModItems.VILLAGER_TRADING_CARD);
-        simpleItem(ModItems.WITCH_TRADING_CARD);
-        simpleItem(ModItems.WOLF_TRADING_CARD);
-        simpleItem(ModItems.ZOMBIE_TRADING_CARD);
-        simpleItem(ModItems.ZOMBIE_HORSE_TRADING_CARD);
-        simpleItem(ModItems.ZOMBIE_VILLAGER_TRADING_CARD);
-        simpleItem(ModItems.ZOMBIFIED_PIGLIN_TRADING_CARD);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

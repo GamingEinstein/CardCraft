@@ -18,9 +18,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CardCraft.MOD_ID);
 
-//    public static final RegistryObject<Block> BITS_FABRICATOR = registerBlock("bits_fabricator",
-//            () -> new BitsFabricatorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
-
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

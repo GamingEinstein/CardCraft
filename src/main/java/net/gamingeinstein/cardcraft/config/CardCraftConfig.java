@@ -21,8 +21,6 @@ import java.util.List;
  * Basically copied this from Traveler's Backpack, since it was the most sensible one that works.
  * That, and... there aren't really any updated tutorials on configs... nor are they this simple...
  * This might not work or is broken somewhere, but hey, at least it's something I guess
- * Actually this 100% doesn't work, since I can't figure out how to make it change recipe inputs/outputs in JSON files...
- * I'll ignore that
  */
 
 @Mod.EventBusSubscriber(modid = CardCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
