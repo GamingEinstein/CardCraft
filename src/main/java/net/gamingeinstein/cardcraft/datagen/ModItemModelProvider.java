@@ -18,9 +18,21 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-
+        // Dev Items
         simpleItem(ModItems.BASE_TRADING_CARD);
         simpleItem(ModItems.BASE_BOOSTER_PACK);
+        // Legend of White Eyes Booster Set
+        simpleItem(ModItems.WHITE_EYES_BOOSTER_PACK);
+        simpleItem(ModItems.LIL_GERALD_TRADING_CARD);
+        simpleItem(ModItems.BROODING_PIGLIN_TRADING_CARD);
+        simpleItem(ModItems.SHARPBONED_SCROOGE_TRADING_CARD);
+        simpleItem(ModItems.STICK_MAN_TRADING_CARD);
+        simpleItem(ModItems.ARCHER_OF_THE_SWAMP_TRADING_CARD);
+        simpleItem(ModItems.NOPE_THE_FISH_TRADING_CARD);
+        simpleItem(ModItems.SMOKING_LAUNCHER_TRADING_CARD);
+        simpleItem(ModItems.JAM_THE_FROG_TRADING_CARD);
+        simpleItem(ModItems.FROSTED_BALLMAN_TRADING_CARD);
+        simpleItem(ModItems.SONIC_SCREECHER_TRADING_CARD);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

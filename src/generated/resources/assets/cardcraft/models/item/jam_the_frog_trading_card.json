@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cardcraft:item/jam_the_frog_trading_card"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cardcraft:item/stick_man_trading_card"
+  }
+}

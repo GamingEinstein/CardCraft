@@ -1,9 +1,33 @@
 {
   "item.cardcraft.base_trading_card": "Trading Card",
-  "item.cardcraft.base_trading_card.information": "Base Trading Card. You shouldn't have this",
+  "item.cardcraft.base_trading_card.details.flavor_text": "Base Trading Card. You shouldn't have this",
   "item.cardcraft.base_booster_pack": "Booster Pack",
-  "item.cardcraft.base_booster_pack.information": "Base Booster Pack. You shouldn't have this",
+  "item.cardcraft.base_booster_pack.details": "Base Booster Pack. You shouldn't have this",
+  "item.cardcraft.white_eyes_booster_pack": "Legend of White Eyes",
+  "item.cardcraft.white_eyes_booster_pack.details": "Contains 3 random cards from the Legend of White Eyes Booster Set",
+  "item.cardcraft.lil_gerald_trading_card": "Lil Gerald",
+  "item.cardcraft.lil_gerald_trading_card.details.flavor_text": "He's a lil guy, doing lil things",
+  "item.cardcraft.brooding_piglin_trading_card": "Brooding Piglin",
+  "item.cardcraft.brooding_piglin_trading_card.details.flavor_text": "A lone Piglin looking for his missing Gold Sword",
+  "item.cardcraft.sharpboned_scrooge_trading_card": "Sharpboned Scrooge",
+  "item.cardcraft.sharpboned_scrooge_trading_card.details.flavor_text": "He's looking for a certain stick to use as target practice",
+  "item.cardcraft.stick_man_trading_card": "Stick Man",
+  "item.cardcraft.stick_man_trading_card.details.flavor_text": "He's running from a certain Skeleton using him as target practice",
+  "item.cardcraft.archer_of_the_swamp_trading_card": "Archer of the Swamp",
+  "item.cardcraft.archer_of_the_swamp_trading_card.details.flavor_text": "They say that they constantly see rainbows. It's probably a result of having mushrooms growing into their skull",
+  "item.cardcraft.nope_the_fish_trading_card": "Nope the Fish",
+  "item.cardcraft.nope_the_fish_trading_card.details.flavor_text": "Why did we follow Shrimp... wait what's this doing here",
+  "item.cardcraft.smoking_launcher_trading_card": "Smoking Launcher",
+  "item.cardcraft.smoking_launcher_trading_card.details.flavor_text": "A capable warrior, launching fireballs with precision",
+  "item.cardcraft.jam_the_frog_trading_card": "Jam the Frog",
+  "item.cardcraft.jam_the_frog_trading_card.details.flavor_text": "No, it's still not a valid target",
+  "item.cardcraft.frosted_ballman_trading_card": "Frosted Ballman",
+  "item.cardcraft.frosted_ballman_trading_card.details.flavor_text": "While not the strongest defender, it tries its best",
+  "item.cardcraft.sonic_screecher_trading_card": "Sonic Screecher",
+  "item.cardcraft.sonic_screecher_trading_card.details.flavor_text": "The only thing more annoying than a flying rat is a flying rat that makes your ears hurt",
 
-  "creativetab.cardcraft_tab_main": "CardCraft",
-  "creativetab.cardcraft_tab_cards": "CardCraft - Cards"
+  "creativetab.cardcraft_tab.main": "CardCraft",
+  "creativetab.cardcraft_tab.cards": "CardCraft Cards",
+
+  "cardcraft.text.placeholder": "Some profound text goes here. Something is definitely broken somewhere"
 }
