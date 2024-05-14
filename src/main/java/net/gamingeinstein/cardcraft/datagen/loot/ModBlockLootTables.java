@@ -16,7 +16,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        //this.dropSelf(ModBlocks.BITS_FABRICATOR.get());
+        this.dropSelf(ModBlocks.DISPLAY_CASE.get());
     }
 
     @Override

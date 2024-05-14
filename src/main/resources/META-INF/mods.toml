@@ -1,36 +1,35 @@
-
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
-modLoader="javafml"
-loaderVersion="${loader_version_range}"
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
 
-license="${mod_license}"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/GamingEinstein/CardCraft/issues"
 
 [[mods]]
-modId="${mod_id}"
-version="${mod_version}"
-displayName="${mod_name}"
-#updateJSONURL="https://change.me.example.invalid/updates.json"
-displayURL="https://youtube.com/@GamingEinstein"
-#logoFile="minequest_tcg.png"
-credits="Buddycards, for inspiring this mod!"
-authors="${mod_authors}"
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+#updateJSONURL=""
+displayURL = "https://youtube.com/@GamingEinstein"
+#logoFile="cardcraft.png"
+credits = "Buddycards, for inspiring this mod!"
+authors = "${mod_authors}"
 #displayTest="MATCH_VERSION"
-description='''${mod_description}'''
+description = '''${mod_description}'''
 
-[[dependencies.${mod_id}]]
-   modId="forge"
-   mandatory=true
-   versionRange="${forge_version_range}"
-   ordering="NONE"
-   side="BOTH"#
+[[dependencies.${ mod_id }]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
 
-[[dependencies.${mod_id}]]
-   modId="minecraft"
-   mandatory=true
-   versionRange="${minecraft_version_range}"
-   ordering="NONE"
-   side="BOTH"
+[[dependencies.${ mod_id }]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
 
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"

@@ -5,31 +5,50 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class CardItem extends Item {
-    public CardItem(String cardName, int cardNumber, boolean isShiny, Properties pProperties) {
+    protected final String CARD_NAME;
+    protected final int CARD_NUMBER;
+    protected final boolean IS_SHINY;
+    protected final String CARD_TYPE;
+    protected final int[] CARD_STATS;
+    protected final String CARD_COST;
+    protected final String CARD_EFFECT;
+    protected final String CARD_FLAVOR_TEXT;
+
+    public CardItem(String cardName, int cardNumber, boolean isShiny, String cardType, int[] cardStats, String cardCost, String cardEffect, String cardFlavorText, Properties pProperties) {
         super(pProperties);
         CARD_NAME = cardName;
         CARD_NUMBER = cardNumber;
         IS_SHINY = isShiny;
-    }
 
-    protected final String CARD_NAME;
-    protected final int CARD_NUMBER;
-    protected final boolean IS_SHINY;
+        CARD_STATS = cardStats;
+        CARD_TYPE = cardType;
+        CARD_COST = cardCost;
+        CARD_EFFECT = cardEffect;
+        CARD_FLAVOR_TEXT = cardFlavorText;
+    }
+    public CardItem(String cardName, int cardNumber, String cardType, int[] cardStats, String cardCost, String cardEffect, String cardFlavorText, Properties pProperties) {
+        this(cardName, cardNumber, false, cardType, cardStats, cardCost, cardEffect, cardFlavorText, pProperties);
+    }
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.translatable("cardcraft.text.placeholder").withStyle(ChatFormatting.RED, ChatFormatting.BOLD, ChatFormatting.UNDERLINE));
-            pTooltipComponents.add(Component.translatable("item.cardcraft." + CARD_NAME + "_trading_card.details.flavor_text").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
-        }
-        else
+            pTooltipComponents.add(Component.literal(CARD_TYPE).withStyle(ChatFormatting.YELLOW));
+            pTooltipComponents.add(Component.literal(CARD_STATS[0] + " HP | " + CARD_STATS[1] + "/" + CARD_STATS[2]).withStyle(ChatFormatting.GREEN));
+            pTooltipComponents.add(Component.literal("===============")); // Why no newlines in tooltips... would make this so much easier...
+            pTooltipComponents.add(Component.literal("Cost: " + CARD_COST).withStyle(ChatFormatting.AQUA));
+            pTooltipComponents.add(Component.literal("Effect: " + CARD_EFFECT).withStyle(ChatFormatting.GOLD));
+            pTooltipComponents.add(Component.literal("==============="));
+            pTooltipComponents.add(Component.literal(CARD_FLAVOR_TEXT).withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
+        } else
             pTooltipComponents.add(Component.literal("Hold SHIFT for Details").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
     }
 
@@ -43,6 +62,6 @@ public class CardItem extends Item {
 
     @Override
     public boolean isFoil(ItemStack pStack) {
-        return IS_SHINY;
+        return pStack.getRarity().equals(Rarity.EPIC) || IS_SHINY;
     }
 }

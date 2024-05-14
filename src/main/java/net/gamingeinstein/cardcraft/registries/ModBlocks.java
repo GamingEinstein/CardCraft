@@ -1,11 +1,12 @@
 package net.gamingeinstein.cardcraft.registries;
 
 import net.gamingeinstein.cardcraft.CardCraft;
-//import net.gamingeinstein.minequesttcg.block.custom.*
-import net.gamingeinstein.cardcraft.registries.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,6 +18,9 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, CardCraft.MOD_ID);
+
+    public static final RegistryObject<Block> DISPLAY_CASE = registerBlock("display_case",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion().sound(SoundType.GLASS)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 

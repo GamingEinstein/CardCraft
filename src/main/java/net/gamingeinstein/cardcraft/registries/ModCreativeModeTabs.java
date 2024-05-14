@@ -15,9 +15,10 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CardCraft.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> CARDCRAFT_TAB_MAIN = CREATIVE_MODE_TABS.register("cardcraft_tab_main",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BASE_BOOSTER_PACK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DISPLAY_CASE.get()))
                     .title(Component.translatable("creativetab.cardcraft_tab.main"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModBlocks.DISPLAY_CASE.get());
                         pOutput.accept(ModItems.BASE_BOOSTER_PACK.get());
                         pOutput.accept(ModItems.WHITE_EYES_BOOSTER_PACK.get());
                     })

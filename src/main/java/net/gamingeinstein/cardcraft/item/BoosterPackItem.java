@@ -9,50 +9,52 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.items.ItemHandlerHelper;
-import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.List;
 
 public class BoosterPackItem extends Item {
+    protected final String BOOSTER_PACK_NAME;
+    protected final int BOOSTER_PACK_NUMBER;
+    protected final String BOOSTER_PACK_INFORMATION;
 
-    public BoosterPackItem(String boosterName, int boosterNumber, Properties pProperties) {
+    public BoosterPackItem(String boosterPackName, int boosterPackNumber, String boosterPackInformation, Properties pProperties) {
         super(pProperties);
-        BOOSTER_NAME = boosterName;
-        BOOSTER_NUMBER = boosterNumber;
+        BOOSTER_PACK_NAME = boosterPackName;
+        BOOSTER_PACK_NUMBER = boosterPackNumber;
+        BOOSTER_PACK_INFORMATION = boosterPackInformation;
     }
-
-    protected final String BOOSTER_NAME;
-    protected final int BOOSTER_NUMBER;
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown())
-            pTooltipComponents.add(Component.translatable("item.cardcraft." + BOOSTER_NAME + "_booster_pack.details").withStyle(ChatFormatting.DARK_AQUA));
+            pTooltipComponents.add(Component.literal(BOOSTER_PACK_INFORMATION).withStyle(ChatFormatting.DARK_AQUA));
         else
-            pTooltipComponents.add(Component.literal("Hold SHIFT for info").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+            pTooltipComponents.add(Component.literal("Hold SHIFT for Details").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
     }
 
-    public String getBoosterName() {
-        return BOOSTER_NAME;
+    public String getBoosterPackName() {
+        return BOOSTER_PACK_NAME;
     }
 
-    public int getBoosterNumber() {
-        return BOOSTER_NUMBER;
+    public int getBoosterPackNumber() {
+        return BOOSTER_PACK_NUMBER;
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         if (pLevel instanceof ServerLevel serverLevel) {
-            // TODO: Possibly fix Booster Pack getting used in Creative if it's a single item and is used in a slot where the cards would go. Otherwise, it works fine
             pPlayer.getItemInHand(pUsedHand).shrink(1);
 
             // Each Booster Pack gives 3 cards, unless it's the Dev Booster Pack (give 1 card in that case). Custom card count might come later
-            for (int i = 0; i < (BOOSTER_NUMBER == 0 ? 1 : 3); i++) {
-                ItemHandlerHelper.giveItemToPlayer(pPlayer, new ItemStack(getRandomCard(BOOSTER_NUMBER, pLevel.getRandom())));
+            for (int i = 0; i < (BOOSTER_PACK_NUMBER == 0 ? 1 : 3); i++) {
+                ItemHandlerHelper.giveItemToPlayer(pPlayer, new ItemStack(getRandomCard(BOOSTER_PACK_NUMBER, pLevel.getRandom())));
             }
         }
 
@@ -60,7 +62,6 @@ public class BoosterPackItem extends Item {
     }
 
     private Item getRandomCard(int boosterNumber, RandomSource random) {
-        int boosterPackMaxCards;
         // A HashMap for each of the Booster Pack sets
         // Legend of White Eyes
         HashMap<Integer, Item> whiteEyesBoosterSet = new HashMap<Integer, Item>();
@@ -76,6 +77,7 @@ public class BoosterPackItem extends Item {
         whiteEyesBoosterSet.put(10, ModItems.SONIC_SCREECHER_TRADING_CARD.get());
         // Future Booster Packs go here
 
+
         // I need to figure out how to make a rarity pull system or something
 //        int randomRarity = random.nextInt(0, 100);
 //        int rarity = 1;
@@ -90,11 +92,10 @@ public class BoosterPackItem extends Item {
 //        else
 //            rarity = 1;
 
-        // Actually choosing the random card based on what booster it comes from
+        // Choosing the random card based on what booster we're currently opening for
         switch (boosterNumber) {
             case 1:
-                boosterPackMaxCards = 10;
-                return whiteEyesBoosterSet.get(random.nextInt(1, boosterPackMaxCards + 1));
+                return whiteEyesBoosterSet.get(random.nextInt(1, whiteEyesBoosterSet.size() + 1));
             default:
                 // Either you are using the Dev Booster Pack, or something went wrong...
                 return ModItems.BASE_TRADING_CARD.get();

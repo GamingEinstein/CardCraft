@@ -28,58 +28,11 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = CardCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CardCraftConfig {
 
-    //Test Config
-    public static boolean testButton;
-
-    public static class Common {
-
-        private static final String REGISTRY_NAME_MATCHER = "([a-z0-9_.-]+:[a-z0-9_/.-]+)";
-
-        TestSettings testSettings;
-
-        Common(final ForgeConfigSpec.Builder builder) {
-
-            builder.comment("Common Config Settings")
-                    .push("common");
-
-            //Tests Settings
-            testSettings = new TestSettings(builder, "testSettings");
-
-            builder.pop();
-        }
-
-        public static class TestSettings {
-
-            public final ForgeConfigSpec.BooleanValue testButton;
-
-            TestSettings(final ForgeConfigSpec.Builder builder, final String path) {
-
-                builder.push(path);
-
-                //Test Settings
-                testButton = builder
-                        .comment("Massive test time")
-                        .define("testSetting", false);
-
-                builder.pop();
-            }
-        }
-
-        public void loadItemsFromConfig(List<? extends String> configList, List<Item> targetList) {
-
-            for (String registryName : configList) {
-                ResourceLocation res  = new ResourceLocation(registryName);
-
-                if (ForgeRegistries.ITEMS.containsKey(res)) {
-                    targetList.add(ForgeRegistries.ITEMS.getValue(res));
-                }
-            }
-        }
-    }
-
+    public static final Common COMMON;
     //Common
     private static final ForgeConfigSpec commonSpec;
-    public static final Common COMMON;
+    //Test Config
+    public static boolean testButton;
 
     static {
         final Pair<Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Common::new);
@@ -114,5 +67,51 @@ public class CardCraftConfig {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
         boolean includeServer = event.includeServer();
+    }
+
+    public static class Common {
+
+        private static final String REGISTRY_NAME_MATCHER = "([a-z0-9_.-]+:[a-z0-9_/.-]+)";
+
+        TestSettings testSettings;
+
+        Common(final ForgeConfigSpec.Builder builder) {
+
+            builder.comment("Common Config Settings")
+                    .push("common");
+
+            //Tests Settings
+            testSettings = new TestSettings(builder, "testSettings");
+
+            builder.pop();
+        }
+
+        public void loadItemsFromConfig(List<? extends String> configList, List<Item> targetList) {
+
+            for (String registryName : configList) {
+                ResourceLocation res = new ResourceLocation(registryName);
+
+                if (ForgeRegistries.ITEMS.containsKey(res)) {
+                    targetList.add(ForgeRegistries.ITEMS.getValue(res));
+                }
+            }
+        }
+
+        public static class TestSettings {
+
+            public final ForgeConfigSpec.BooleanValue testButton;
+
+            TestSettings(final ForgeConfigSpec.Builder builder, final String path) {
+
+                builder.push(path);
+
+                //Test Settings
+                testButton = builder
+                        .comment("Massive test time")
+                        .define("testSetting", false);
+
+                builder.pop();
+            }
+        }
     }
 }
