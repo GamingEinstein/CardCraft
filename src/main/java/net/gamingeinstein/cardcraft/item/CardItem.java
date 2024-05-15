@@ -22,12 +22,11 @@ public class CardItem extends Item {
     protected final String CARD_EFFECT;
     protected final String CARD_FLAVOR_TEXT;
 
-    public CardItem(String cardName, int cardNumber, boolean isShiny, String cardType, int[] cardStats, String cardCost, String cardEffect, String cardFlavorText, Properties pProperties) {
+    public CardItem(String cardName, int cardNumber, boolean isShiny, String cardType, @Nullable int[] cardStats, String cardCost, String cardEffect, String cardFlavorText, Properties pProperties) {
         super(pProperties);
         CARD_NAME = cardName;
         CARD_NUMBER = cardNumber;
         IS_SHINY = isShiny;
-
         CARD_STATS = cardStats;
         CARD_TYPE = cardType;
         CARD_COST = cardCost;
@@ -41,13 +40,14 @@ public class CardItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.literal(CARD_TYPE).withStyle(ChatFormatting.YELLOW));
-            pTooltipComponents.add(Component.literal(CARD_STATS[0] + " HP | " + CARD_STATS[1] + "/" + CARD_STATS[2]).withStyle(ChatFormatting.GREEN));
-            pTooltipComponents.add(Component.literal("===============")); // Why no newlines in tooltips... would make this so much easier...
+            pTooltipComponents.add(Component.literal(CARD_TYPE).withStyle(ChatFormatting.RED));
+            if (CARD_STATS != null)
+                pTooltipComponents.add(Component.literal(CARD_STATS[0] + " HP | " + CARD_STATS[1] + "/" + CARD_STATS[2]).withStyle(ChatFormatting.GREEN));
+            pTooltipComponents.add(Component.literal("==============="));
             pTooltipComponents.add(Component.literal("Cost: " + CARD_COST).withStyle(ChatFormatting.AQUA));
             pTooltipComponents.add(Component.literal("Effect: " + CARD_EFFECT).withStyle(ChatFormatting.GOLD));
             pTooltipComponents.add(Component.literal("==============="));
-            pTooltipComponents.add(Component.literal(CARD_FLAVOR_TEXT).withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
+            pTooltipComponents.add(Component.literal(CARD_FLAVOR_TEXT).withStyle(ChatFormatting.DARK_PURPLE, ChatFormatting.ITALIC));
         } else
             pTooltipComponents.add(Component.literal("Hold SHIFT for Details").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
     }

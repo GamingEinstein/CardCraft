@@ -46,9 +46,12 @@ public class CardCraft {
      *  The ultimate list of things to fix, add, change, etc. Will inevitably grow massive and become unmanageable
      *  TODO: Fix Display Case not dropping itself when mined, even when using the correct tool
      *  TODO: Fix Booster Pack getting used in Creative if it's a single item and is used in a slot where cards would go
-     *  TODO: Make rarities actually matter when rolling for cards
+     *  TODO: Make a system that can count how many boosters a player has opened, then giving them a certain rarity of card if they reach that threshold
      *  TODO: Add more cards and details
      *  TODO: Figure out how to play the game. Maybe that can wait until I have enough content added
-     *  TODO: Add more content besides the cards
+     *  TODO: Add more content besides the cards (advancements, structures(?), villager profession(?), mobs(?))
+     *  TODO: Add a way to obtain booster packs and cards in Survival (probably loot chests for Booster Packs and Villagers for individual cards)
+     *  TODO: Make rarities configurable (will require learning how to make configs, since for some reason there isn't a tutorial on the internet for that)
+     *  TODO: Make Fabric port once the main content of the mod is planned out and exists? Or maybe someone else can do that?
      */
 }

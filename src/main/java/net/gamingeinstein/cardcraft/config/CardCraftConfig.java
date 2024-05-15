@@ -18,11 +18,11 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.util.List;
 
 /*
- * Nothing to see here... Currently can't think of anything useful to put here yet
+ *  Eventually should have the ability to configure card rarities (if you want or need to for some reason) among other things that I can't think of right now
  *
- * Also I basically copied this from Traveler's Backpack, since it was the most sensible one that works.
- * That, and... there aren't really any updated tutorials on configs... nor are they this simple...
- * This might not work or is broken somewhere, but hey, at least it's something I guess
+ *  I basically copied this from Traveler's Backpack, since it was the most sensible one that works.
+ *  That, and... there aren't really any updated tutorials on configs... nor are they this simple...
+ *  This might not work or is broken somewhere, but hey, at least it's something I guess
  */
 
 @Mod.EventBusSubscriber(modid = CardCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

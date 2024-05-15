@@ -1,8 +1,9 @@
 {
   "block.cardcraft.display_case": "Display Case",
+
   "item.cardcraft.base_booster_pack": "Booster Pack",
   "item.cardcraft.base_trading_card": "Trading Card",
-  "item.cardcraft.white_eyes_booster_pack": "Legend of White Eyes",
+  "item.cardcraft.white_eyes_booster_pack": "Legend of White Eyes Booster Pack",
   "item.cardcraft.lil_gerald_trading_card": "Lil Gerald",
   "item.cardcraft.brooding_piglin_trading_card": "Brooding Piglin",
   "item.cardcraft.sharpboned_scrooge_trading_card": "Sharpboned Scrooge",
@@ -13,7 +14,11 @@
   "item.cardcraft.jam_the_frog_trading_card": "Jam the Frog",
   "item.cardcraft.frosted_ballman_trading_card": "Frosted Ballman",
   "item.cardcraft.sonic_screecher_trading_card": "Sonic Screecher",
+  "item.cardcraft.book_of_looting_trading_card": "Book of Looting",
+  "item.cardcraft.cry_of_the_undead_trading_card": "Cry of the Undead",
+
   "creativetab.cardcraft_tab.main": "CardCraft",
   "creativetab.cardcraft_tab.cards": "CardCraft Cards",
+
   "cardcraft.text.missing_oopsies": "Some profound text should go here. Something broke somewhere"
 }

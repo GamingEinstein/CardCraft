@@ -33,6 +33,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.JAM_THE_FROG_TRADING_CARD);
         simpleItem(ModItems.FROSTED_BALLMAN_TRADING_CARD);
         simpleItem(ModItems.SONIC_SCREECHER_TRADING_CARD);
+        simpleItem(ModItems.BOOK_OF_LOOTING_TRADING_CARD);
+        simpleItem(ModItems.CRY_OF_THE_UNDEAD_TRADING_CARD);
+        //simpleItem(ModItems.BLANK_TRADING_CARD);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

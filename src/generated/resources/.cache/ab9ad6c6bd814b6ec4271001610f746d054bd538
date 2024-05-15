@@ -1,8 +1,10 @@
-// 1.20.1	2024-05-13T12:22:54.771142	Item Models: cardcraft
+// 1.20.1	2024-05-14T17:41:25.3242345	Item Models: cardcraft
 128551f0e6f0db3efba93e6458021e8364110253 assets/cardcraft/models/item/archer_of_the_swamp_trading_card.json
 e89b1821e3a4cb746723ddf0950314dd86494d39 assets/cardcraft/models/item/base_booster_pack.json
 0851aba3bda76f0ff6aa4efcbe00d12c12908f3f assets/cardcraft/models/item/base_trading_card.json
+8b9f0c5731f0a534d5da34dc10a9bfb7388c9a72 assets/cardcraft/models/item/book_of_looting_trading_card.json
 40b1afd45267cc0b595107b0b98741dde4d53ed4 assets/cardcraft/models/item/brooding_piglin_trading_card.json
+4e61f829ad01c25f48f7b28b4e2adbe4370370c6 assets/cardcraft/models/item/cry_of_the_undead_trading_card.json
 4c8a8ec303ba6bb6231599f9cae71df1e0385740 assets/cardcraft/models/item/frosted_ballman_trading_card.json
 87902991c503393403176d7af6a4effd3f3eae4a assets/cardcraft/models/item/jam_the_frog_trading_card.json
 7df0a4ae75590df075219545f1b40edfd442d6eb assets/cardcraft/models/item/lil_gerald_trading_card.json

@@ -11,11 +11,12 @@ version = "${mod_version}"
 displayName = "${mod_name}"
 #updateJSONURL=""
 displayURL = "https://youtube.com/@GamingEinstein"
-#logoFile="cardcraft.png"
+logoFile="cardcraftLogo.png"
 credits = "Buddycards, for inspiring this mod!"
 authors = "${mod_authors}"
 #displayTest="MATCH_VERSION"
 description = '''${mod_description}'''
+itemIcon = "cardcraft:base_trading_card"
 
 [[dependencies.${ mod_id }]]
 modId = "forge"

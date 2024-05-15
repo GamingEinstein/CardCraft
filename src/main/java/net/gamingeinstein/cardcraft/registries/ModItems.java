@@ -15,11 +15,11 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CardCraft.MOD_ID);
 
     // BEHOLD, THE WALL OF TEXT! ISN'T IT GLORIOUS?!... At least I started this before I added a ton of cards without details... yay...
-    // Base for me to copy for the rest of the cards
+    // The Dev items, basically a base for me to use
     public static final RegistryObject<Item> BASE_BOOSTER_PACK = ITEMS.register("base_booster_pack",
-            () -> new BoosterPackItem("base",
+            () -> new BoosterPackItem("base", // Booster Name
                     0, // Booster Pack Number
-                    "Base Booster Pack. You shouldn't have this", // Booster Pack Information
+                    "Dev Booster Pack. You shouldn't have this", // Booster Pack Information
                     new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> BASE_TRADING_CARD = ITEMS.register("base_trading_card",
             () -> new CardItem("base", // Card Name
@@ -28,7 +28,7 @@ public class ModItems {
                     new int[]{20, 20, 20}, // Card Stats
                     "Your family lineage", // Card Costs
                     "+1 Happiness for your Franchise", // Card Effect
-                    "Base Trading Card. You shouldn't have this | BASE-EN00", // Card Flavor Text
+                    "Dev Trading Card. You shouldn't have this | BASE-EN00", // Card Flavor Text
                     new Item.Properties().rarity(Rarity.EPIC)));
     // Legend of White Eyes
     public static final RegistryObject<Item> WHITE_EYES_BOOSTER_PACK = ITEMS.register("white_eyes_booster_pack",
@@ -61,17 +61,17 @@ public class ModItems {
                     new int[]{3, 3, 2},
                     "None",
                     "None",
-                    "He's looking for a certain stick to use as target practice | WHEY-EN03",
+                    "He's looking for a certain Human to use as target practice | WHEY-EN03",
                     new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> STICK_MAN_TRADING_CARD = ITEMS.register("stick_man_trading_card",
             () -> new CardItem("stick_man",
                     4,
                     true,
-                    "Creature - Ent",
+                    "Creature - Human Warrior",
                     new int[]{3, 3, 2},
                     "None",
                     "None",
-                    "He's running from a certain Skeleton using him as target practice | WHEY-EN04",
+                    "He's running from a certain Skeleton who wants to use him as target practice | WHEY-EN04",
                     new Item.Properties().rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> ARCHER_OF_THE_SWAMP_TRADING_CARD = ITEMS.register("archer_of_the_swamp_trading_card",
             () -> new CardItem("archer_of_the_swamp",
@@ -80,16 +80,16 @@ public class ModItems {
                     new int[]{4, 4, 3},
                     "None",
                     "None",
-                    "They say that they constantly see rainbows. It's probably a result of having mushrooms growing into their skull | WHEY-EN05",
+                    "It constantly see rainbows as a result of having mushrooms growing into it's skull | WHEY-EN05",
                     new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> NOPE_THE_FISH_TRADING_CARD = ITEMS.register("nope_the_fish_trading_card",
             () -> new CardItem("nope_the_fish",
                     6,
                     "Equipment - Fish",
-                    new int[]{1, 1, 0},
+                    null,
                     "None",
                     "Equip to target Mob. It gains +1/+0 and gains Double Strike",
-                    "Why did we follow Shrimp... wait what's this doing here | WHEY-EN06",
+                    "Why did we fol- wait what's this doing here | WHEY-EN06",
                     new Item.Properties().rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> SMOKING_LAUNCHER_TRADING_CARD = ITEMS.register("smoking_launcher_trading_card",
             () -> new CardItem("smoking_launcher",
@@ -98,7 +98,7 @@ public class ModItems {
                     new int[]{5, 4, 2},
                     "None",
                     "None",
-                    "A capable warrior, launching fireballs with precision | WHEY-EN07",
+                    "A blazing creature capable of shooting fireballs with precision | WHEY-EN07",
                     new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> JAM_THE_FROG_TRADING_CARD = ITEMS.register("jam_the_frog_trading_card",
             () -> new CardItem("jam_the_frog",
@@ -116,7 +116,7 @@ public class ModItems {
                     new int[]{3, 1, 3},
                     "None",
                     "None",
-                    "While not the strongest defender, it tries its best | WHEY-EN09",
+                    "It tries its best even though it can't defend itself well | WHEY-EN09",
                     new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SONIC_SCREECHER_TRADING_CARD = ITEMS.register("sonic_screecher_trading_card",
             () -> new CardItem("sonic_screecher",
@@ -125,11 +125,35 @@ public class ModItems {
                     new int[]{2, 2, 2},
                     "None",
                     "None",
-                    "The only thing more annoying than a flying rat is a flying rat that makes your ears hurt | WHEY-EN10",
+                    "The only thing more annoying than a flying rat is a loud flying rat | WHEY-EN10",
                     new Item.Properties().rarity(Rarity.UNCOMMON)));
-
-    //public static final RegistryObject<Item> GRAVEYARD_CRY_TRADING_CARD = ITEMS.register("graveyard_cry_trading_card",
-    //        () -> new CardItem("graveyard_cry", 3, new Item.Properties().rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> BOOK_OF_LOOTING_TRADING_CARD = ITEMS.register("book_of_looting_trading_card",
+            () -> new CardItem("book_of_looting",
+                    11,
+                    "Spell - Enchanted Book",
+                    null,
+                    "None",
+                    "Draw 2 Cards",
+                    "Some people wonder what this book does, even though the contents are quite simple to read | WHEY-EN11",
+                    new Item.Properties().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> CRY_OF_THE_UNDEAD_TRADING_CARD = ITEMS.register("cry_of_the_undead_trading_card",
+            () -> new CardItem("cry_of_the_undead",
+                    12,
+                    "Spell - Item",
+                    null,
+                    "None",
+                    "Destroy one Mob",
+                    "The undead are always looking for more victims to add to their ranks | WHEY-EN12",
+                    new Item.Properties().rarity(Rarity.RARE)));
+//    public static final RegistryObject<Item> BLANK_TRADING_CARD = ITEMS.register("blank_trading_card",
+//            () -> new CardItem("blank_trading_card",
+//                    13,
+//                    "Spell - None",
+//                    null,
+//                    "None",
+//                    "None",
+//                    "None",
+//                    new Item.Properties().rarity(Rarity.COMMON)));
 
 
     public static void register(IEventBus eventBus) {

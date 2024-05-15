@@ -39,6 +39,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.JAM_THE_FROG_TRADING_CARD.get());
                         pOutput.accept(ModItems.FROSTED_BALLMAN_TRADING_CARD.get());
                         pOutput.accept(ModItems.SONIC_SCREECHER_TRADING_CARD.get());
+                        pOutput.accept(ModItems.BOOK_OF_LOOTING_TRADING_CARD.get());
+                        pOutput.accept(ModItems.CRY_OF_THE_UNDEAD_TRADING_CARD.get());
+                        //pOutput.accept(ModItems.BLANK_TRADING_CARD.get());
                     })
                     .build());
 
