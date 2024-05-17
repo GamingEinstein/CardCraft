@@ -18,7 +18,25 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        // Dev Items
+        simpleItem(ModItems.SPECIAL_COIN);
+        simpleItem(ModItems.SPECIAL_D1);
+        simpleItem(ModItems.WHITE_SPECIAL_D6);
+        simpleItem(ModItems.LIGHT_GRAY_SPECIAL_D6);
+        simpleItem(ModItems.GRAY_SPECIAL_D6);
+        simpleItem(ModItems.BLACK_SPECIAL_D6);
+        simpleItem(ModItems.BROWN_SPECIAL_D6);
+        simpleItem(ModItems.RED_SPECIAL_D6);
+        simpleItem(ModItems.ORANGE_SPECIAL_D6);
+        simpleItem(ModItems.YELLOW_SPECIAL_D6);
+        simpleItem(ModItems.LIME_SPECIAL_D6);
+        simpleItem(ModItems.GREEN_SPECIAL_D6);
+        simpleItem(ModItems.CYAN_SPECIAL_D6);
+        simpleItem(ModItems.LIGHT_BLUE_SPECIAL_D6);
+        simpleItem(ModItems.BLUE_SPECIAL_D6);
+        simpleItem(ModItems.PURPLE_SPECIAL_D6);
+        simpleItem(ModItems.MAGENTA_SPECIAL_D6);
+        simpleItem(ModItems.PINK_SPECIAL_D6);
+        // Dev Card/Booster Pack items
         simpleItem(ModItems.BASE_TRADING_CARD);
         simpleItem(ModItems.BASE_BOOSTER_PACK);
         // Legend of White Eyes Booster Set
@@ -35,7 +53,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SONIC_SCREECHER_TRADING_CARD);
         simpleItem(ModItems.BOOK_OF_LOOTING_TRADING_CARD);
         simpleItem(ModItems.CRY_OF_THE_UNDEAD_TRADING_CARD);
-        //simpleItem(ModItems.BLANK_TRADING_CARD);
+        simpleItem(ModItems.ICED_MARKSMAN_TRADING_CARD);
+        simpleItem(ModItems.NOTCH_TRADING_CARD);
+        simpleItem(ModItems.APPLE_TRADING_CARD);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

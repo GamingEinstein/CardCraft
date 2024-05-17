@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:stone_button"
+    },
+    "2": {
+      "item": "minecraft:clay_ball"
+    },
+    "3": {
+      "item": "minecraft:red_dye"
+    },
+    "4": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "pattern": [
+    "324",
+    "212",
+    "423"
+  ],
+  "result": {
+    "item": "cardcraft:red_special_d6"
+  },
+  "show_notification": true
+}

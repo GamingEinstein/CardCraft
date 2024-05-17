@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:iron_nugget"
+    },
+    "2": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    " 2 ",
+    "212",
+    " 2 "
+  ],
+  "result": {
+    "item": "cardcraft:special_coin"
+  },
+  "show_notification": true
+}

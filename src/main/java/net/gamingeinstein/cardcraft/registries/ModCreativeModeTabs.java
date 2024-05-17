@@ -18,7 +18,27 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DISPLAY_CASE.get()))
                     .title(Component.translatable("creativetab.cardcraft_tab.main"))
                     .displayItems((pParameters, pOutput) -> {
+                        // Normal Things
                         pOutput.accept(ModBlocks.DISPLAY_CASE.get());
+                        pOutput.accept(ModItems.SPECIAL_COIN.get());
+                        pOutput.accept(ModItems.SPECIAL_D1.get());
+                        pOutput.accept(ModItems.WHITE_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.LIGHT_GRAY_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.GRAY_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.BLACK_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.BROWN_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.RED_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.ORANGE_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.YELLOW_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.LIME_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.GREEN_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.CYAN_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.LIGHT_BLUE_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.BLUE_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.PURPLE_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.MAGENTA_SPECIAL_D6.get());
+                        pOutput.accept(ModItems.PINK_SPECIAL_D6.get());
+                        // Booster Packs
                         pOutput.accept(ModItems.BASE_BOOSTER_PACK.get());
                         pOutput.accept(ModItems.WHITE_EYES_BOOSTER_PACK.get());
                     })
@@ -28,6 +48,8 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BASE_TRADING_CARD.get()))
                     .title(Component.translatable("creativetab.cardcraft_tab.cards"))
                     .displayItems((pParameters, pOutput) -> {
+                        // All the cards... ever
+                        // Legend of White Eyes
                         pOutput.accept(ModItems.BASE_TRADING_CARD.get());
                         pOutput.accept(ModItems.LIL_GERALD_TRADING_CARD.get());
                         pOutput.accept(ModItems.BROODING_PIGLIN_TRADING_CARD.get());
@@ -41,7 +63,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SONIC_SCREECHER_TRADING_CARD.get());
                         pOutput.accept(ModItems.BOOK_OF_LOOTING_TRADING_CARD.get());
                         pOutput.accept(ModItems.CRY_OF_THE_UNDEAD_TRADING_CARD.get());
-                        //pOutput.accept(ModItems.BLANK_TRADING_CARD.get());
+                        pOutput.accept(ModItems.ICED_MARKSMAN_TRADING_CARD.get());
+                        pOutput.accept(ModItems.NOTCH_TRADING_CARD.get());
+                        pOutput.accept(ModItems.APPLE_TRADING_CARD.get());
                     })
                     .build());
 

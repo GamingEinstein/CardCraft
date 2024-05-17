@@ -49,7 +49,7 @@ public class CardItem extends Item {
             pTooltipComponents.add(Component.literal("==============="));
             pTooltipComponents.add(Component.literal(CARD_FLAVOR_TEXT).withStyle(ChatFormatting.DARK_PURPLE, ChatFormatting.ITALIC));
         } else
-            pTooltipComponents.add(Component.literal("Hold SHIFT for Details").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+            pTooltipComponents.add(Component.literal("Hold " + ChatFormatting.WHITE + "SHIFT" + ChatFormatting.RESET + " for Details").withStyle(ChatFormatting.GRAY));
     }
 
     public String getCardName() {

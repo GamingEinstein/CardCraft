@@ -1,5 +1,23 @@
 {
   "block.cardcraft.display_case": "Display Case",
+  "item.cardcraft.special_coin": "Special Coin",
+  "item.cardcraft.special_d1": "Special D1",
+  "item.cardcraft.white_special_d6": "Special D6",
+  "item.cardcraft.light_gray_special_d6": "Special D6",
+  "item.cardcraft.gray_special_d6": "Special D6",
+  "item.cardcraft.black_special_d6": "Special D6",
+  "item.cardcraft.brown_special_d6": "Special D6",
+  "item.cardcraft.red_special_d6": "Special D6",
+  "item.cardcraft.orange_special_d6": "Special D6",
+  "item.cardcraft.yellow_special_d6": "Special D6",
+  "item.cardcraft.lime_special_d6": "Special D6",
+  "item.cardcraft.green_special_d6": "Special D6",
+  "item.cardcraft.cyan_special_d6": "Special D6",
+  "item.cardcraft.light_blue_special_d6": "Special D6",
+  "item.cardcraft.blue_special_d6": "Special D6",
+  "item.cardcraft.purple_special_d6": "Special D6",
+  "item.cardcraft.magenta_special_d6": "Special D6",
+  "item.cardcraft.pink_special_d6": "Special D6",
 
   "item.cardcraft.base_booster_pack": "Booster Pack",
   "item.cardcraft.base_trading_card": "Trading Card",
@@ -16,9 +34,13 @@
   "item.cardcraft.sonic_screecher_trading_card": "Sonic Screecher",
   "item.cardcraft.book_of_looting_trading_card": "Book of Looting",
   "item.cardcraft.cry_of_the_undead_trading_card": "Cry of the Undead",
+  "item.cardcraft.iced_marksman_trading_card": "Iced Marksman",
+  "item.cardcraft.notch_trading_card": "Notch",
+  "item.cardcraft.apple_trading_card": "Apple",
 
   "creativetab.cardcraft_tab.main": "CardCraft",
-  "creativetab.cardcraft_tab.cards": "CardCraft Cards",
+  "creativetab.cardcraft_tab.cards": "CardCraft - Cards",
 
-  "cardcraft.text.missing_oopsies": "Some profound text should go here. Something broke somewhere"
+  "cardcraft.text.missing_text_oopsies": "Some profound text should go here, but something broke... oops ¯\\_(ツ)_/¯",
+  "cardcraft.text.d1_secret_message": "... You know, there are things in the universe that you have to ask yourself: \"Why? Why is this the way it is?\" This moment right here is a perfect example of that. There should be no reason that someone would want to roll for an outcome with only one possible result. Why does a D1 exist? What's even the purpose? It makes no sense. Are you just THAT indecisive about ONE THING that you need something with a 100% outcome to tell you? Kinda sad, not gonna lie... Oh well... Anyways, since you got this message, have this. You can't really use it, but it's something cool to show off... now make a good decision and roll a normal dice..."
 }
