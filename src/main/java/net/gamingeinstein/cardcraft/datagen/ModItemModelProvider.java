@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(ModItems.OFFICIAL_RULEBOOK);
         simpleItem(ModItems.SPECIAL_COIN);
         simpleItem(ModItems.SPECIAL_D1);
         simpleItem(ModItems.WHITE_SPECIAL_D6);
@@ -36,10 +37,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PURPLE_SPECIAL_D6);
         simpleItem(ModItems.MAGENTA_SPECIAL_D6);
         simpleItem(ModItems.PINK_SPECIAL_D6);
-        // Dev Card/Booster Pack items
+        // Dev
         simpleItem(ModItems.BASE_TRADING_CARD);
         simpleItem(ModItems.BASE_BOOSTER_PACK);
-        // Legend of White Eyes Booster Set
+        // Legend of White Eyes
         simpleItem(ModItems.WHITE_EYES_BOOSTER_PACK);
         simpleItem(ModItems.LIL_GERALD_TRADING_CARD);
         simpleItem(ModItems.BROODING_PIGLIN_TRADING_CARD);
@@ -56,6 +57,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ICED_MARKSMAN_TRADING_CARD);
         simpleItem(ModItems.NOTCH_TRADING_CARD);
         simpleItem(ModItems.APPLE_TRADING_CARD);
+        simpleItem(ModItems.HUNGRY_CAMEL_TRADING_CARD);
+        simpleItem(ModItems.WORKING_ALLAY_TRADING_CARD);
+        simpleItem(ModItems.ANGRY_VEX_TRADING_CARD);
+        simpleItem(ModItems.HEATED_JUMPER_TRADING_CARD);
+        simpleItem(ModItems.GLOW_OF_THE_DEEP_TRADING_CARD);
+        simpleItem(ModItems.LIVING_BOX_TRADING_CARD);
+        simpleItem(ModItems.BLOCK_THIEF_TRADING_CARD);
+        simpleItem(ModItems.DECAYING_STEED_TRADING_CARD);
+        // Tokens
+        simpleItem(ModItems.MAGMA_CUBE_TOKEN_TRADING_CARD);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

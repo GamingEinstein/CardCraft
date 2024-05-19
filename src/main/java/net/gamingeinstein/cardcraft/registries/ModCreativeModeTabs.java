@@ -10,15 +10,15 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModeTabs {
-
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CardCraft.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> CARDCRAFT_TAB_MAIN = CREATIVE_MODE_TABS.register("cardcraft_tab_main",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DISPLAY_CASE.get()))
-                    .title(Component.translatable("creativetab.cardcraft_tab.main"))
+    public static final RegistryObject<CreativeModeTab> CARDCRAFT = CREATIVE_MODE_TABS.register("cardcraft",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OFFICIAL_RULEBOOK.get()))
+                    .title(Component.translatable("creativetab.cardcraft.main"))
                     .displayItems((pParameters, pOutput) -> {
                         // Normal Things
+                        pOutput.accept(ModItems.OFFICIAL_RULEBOOK.get());
                         pOutput.accept(ModBlocks.DISPLAY_CASE.get());
                         pOutput.accept(ModItems.SPECIAL_COIN.get());
                         pOutput.accept(ModItems.SPECIAL_D1.get());
@@ -44,11 +44,10 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> CARDCRAFT_TAB_CARDS = CREATIVE_MODE_TABS.register("cardcraft_tab_cards",
+    public static final RegistryObject<CreativeModeTab> CARDCRAFT_CARDS = CREATIVE_MODE_TABS.register("cardcraft_cards",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BASE_TRADING_CARD.get()))
-                    .title(Component.translatable("creativetab.cardcraft_tab.cards"))
+                    .title(Component.translatable("creativetab.cardcraft.cards"))
                     .displayItems((pParameters, pOutput) -> {
-                        // All the cards... ever
                         // Legend of White Eyes
                         pOutput.accept(ModItems.BASE_TRADING_CARD.get());
                         pOutput.accept(ModItems.LIL_GERALD_TRADING_CARD.get());
@@ -66,6 +65,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ICED_MARKSMAN_TRADING_CARD.get());
                         pOutput.accept(ModItems.NOTCH_TRADING_CARD.get());
                         pOutput.accept(ModItems.APPLE_TRADING_CARD.get());
+                        pOutput.accept(ModItems.HUNGRY_CAMEL_TRADING_CARD.get());
+                        pOutput.accept(ModItems.WORKING_ALLAY_TRADING_CARD.get());
+                        pOutput.accept(ModItems.ANGRY_VEX_TRADING_CARD.get());
+                        pOutput.accept(ModItems.HEATED_JUMPER_TRADING_CARD.get());
+                        pOutput.accept(ModItems.GLOW_OF_THE_DEEP_TRADING_CARD.get());
+                        pOutput.accept(ModItems.LIVING_BOX_TRADING_CARD.get());
+                        pOutput.accept(ModItems.BLOCK_THIEF_TRADING_CARD.get());
+                        pOutput.accept(ModItems.DECAYING_STEED_TRADING_CARD.get());
+                        // Tokens
+                        pOutput.accept(ModItems.MAGMA_CUBE_TOKEN_TRADING_CARD.get());
                     })
                     .build());
 

@@ -3,15 +3,18 @@
   "category": "misc",
   "key": {
     "1": {
-      "item": "minecraft:iron_nugget"
+      "item": "minecraft:stone_button"
     },
     "2": {
-      "item": "minecraft:gold_nugget"
+      "item": "minecraft:clay_ball"
+    },
+    "3": {
+      "item": "minecraft:black_dye"
     }
   },
   "pattern": [
-    "2",
-    "1"
+    "23",
+    "1 "
   ],
   "result": {
     "item": "cardcraft:special_d1"

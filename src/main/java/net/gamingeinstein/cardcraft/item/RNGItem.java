@@ -63,7 +63,7 @@ public class RNGItem extends Item {
                     flips.add(pPlayer.getRandom().nextInt(ROLL_MAX) + 1 == 1 ? "Heads" : "Tails");
                 else {
                     rolls.add(pPlayer.getRandom().nextInt(1, ROLL_MAX + 1));
-                    if (ROLL_MAX == 1 && pPlayer.getRandom().nextInt(10) == 0)
+                    if (ROLL_MAX == 1 && pPlayer.getRandom().nextInt(1000000) == 0)
                         secretMessage = true; // Wonder how often people will get this... well 1 in a million, but RNG be RNG
                 }
             }
@@ -104,7 +104,7 @@ public class RNGItem extends Item {
                 pPlayer.sendSystemMessage(Component.literal("Rolled: " + output));
                 // If the player rolled the 1 in a Million, say the message and give them a Base Trading Card (will probably be removed or modified in the future)
                 if (secretMessage) {
-                    pPlayer.sendSystemMessage(Component.translatable("cardcraft.text.d1_secret_message").withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC));
+                    pPlayer.displayClientMessage(Component.translatable("item.cardcraft.special_d1.secret_message").withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC), false);
                     ItemHandlerHelper.giveItemToPlayer(pPlayer, new ItemStack(ModItems.BASE_TRADING_CARD.get()));
                 }
             }

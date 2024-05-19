@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glass": {
+    "has_book": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:glass"
+              "minecraft:book"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cardcraft:display_case"
+        "recipe": "cardcraft:official_rulebook"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_glass",
+      "has_book",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cardcraft:display_case"
+      "cardcraft:official_rulebook"
     ]
   },
   "sends_telemetry_event": false

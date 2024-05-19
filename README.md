@@ -3,7 +3,7 @@
 Become the Ultimate Trading Card Collector!<br>
 Travel across the lands to loot, trade, and fight in order to collect them all!
 
-Currently, there are 10 cards for you to collect, featuring familiar faces and items from Minecraft
+Currently, there are XX cards for you to collect, featuring familiar faces and items from Minecraft
 
 This mod is greatly inspired by Buddycards. I wanted to take my own spin on a mod about collecting cards, so this project was born
 

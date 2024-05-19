@@ -1,12 +1,9 @@
 package net.gamingeinstein.cardcraft.datagen;
 
-import net.gamingeinstein.cardcraft.registries.ModBlocks;
 import net.gamingeinstein.cardcraft.registries.ModItems;
+import net.gamingeinstein.cardcraft.util.ModTags;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -21,19 +18,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
-//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.XXX.get(), #)
-//                .requires(ModItems.XXX.get())
-//                .unlockedBy(getHasName(ModItems.XXX.get()), has(ModItems.XXX.get()))
-//                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DISPLAY_CASE.get())
-                .pattern("111")
-                .pattern("1 1")
-                .pattern("222")
-                .define('1', Items.GLASS)
-                .define('2', Items.STONE)
-                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.OFFICIAL_RULEBOOK.get(), 1)
+                .requires(Items.BOOK)
+                .requires(ModTags.Items.CARDS)
+                .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
                 .save(pWriter);
+
+//        Temporarily disabled until I can figure out why it won't drop iteself when mined
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DISPLAY_CASE.get())
+//                .pattern("111")
+//                .pattern("1 1")
+//                .pattern("222")
+//                .define('1', Items.GLASS)
+//                .define('2', Items.STONE)
+//                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
+//                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPECIAL_COIN.get())
                 .pattern(" 2 ")
                 .pattern("212")
@@ -43,10 +42,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPECIAL_D1.get())
-                .pattern("2")
-                .pattern("1")
-                .define('1', Items.IRON_NUGGET)
-                .define('2', Items.GOLD_NUGGET)
+                .pattern("23")
+                .pattern("1 ")
+                .define('1', Items.STONE_BUTTON)
+                .define('2', Items.CLAY_BALL)
+                .define('3', Items.BLACK_DYE)
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHITE_SPECIAL_D6.get())

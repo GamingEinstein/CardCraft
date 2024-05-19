@@ -35,7 +35,7 @@ public class BoosterPackItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown())
-            pTooltipComponents.add(Component.literal(BOOSTER_PACK_INFORMATION).withStyle(ChatFormatting.DARK_AQUA));
+            pTooltipComponents.add(Component.literal(BOOSTER_PACK_INFORMATION + " | Contains 3 random cards").withStyle(ChatFormatting.DARK_AQUA));
         else
             pTooltipComponents.add(Component.literal("Hold " + ChatFormatting.WHITE + "SHIFT" + ChatFormatting.RESET + " for Details").withStyle(ChatFormatting.GRAY));
     }
@@ -83,34 +83,42 @@ public class BoosterPackItem extends Item {
         whiteEyesBoosterPack.put(13, ModItems.ICED_MARKSMAN_TRADING_CARD.get());
         whiteEyesBoosterPack.put(14, ModItems.NOTCH_TRADING_CARD.get());
         whiteEyesBoosterPack.put(15, ModItems.APPLE_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(16, ModItems.HUNGRY_CAMEL_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(17, ModItems.WORKING_ALLAY_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(18, ModItems.ANGRY_VEX_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(19, ModItems.HEATED_JUMPER_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(20, ModItems.GLOW_OF_THE_DEEP_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(21, ModItems.LIVING_BOX_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(22, ModItems.BLOCK_THIEF_TRADING_CARD.get());
+        whiteEyesBoosterPack.put(23, ModItems.DECAYING_STEED_TRADING_CARD.get());
         // All Booster Packs
         HashMap<Integer, HashMap<Integer, Item>> allBoosterPacks = new HashMap<>();
         allBoosterPacks.put(1, whiteEyesBoosterPack);
 
         // Choose a random rarity
-        // HashMap of all available Rarities
         HashMap<Integer, Rarity> cardRarities = new HashMap<>();
         cardRarities.put(1, Rarity.COMMON);
         cardRarities.put(2, Rarity.UNCOMMON);
         cardRarities.put(3, Rarity.RARE);
         cardRarities.put(4, Rarity.EPIC);
-        // Get the players stat on this booster pack
+        // Get the players stat on this booster pack, then give them a guaranteed rarity based on that stat
         // (insert getting player stats here... IF ONLY THERE WAS INFORMATION ON THE INTERNET FOR THIS)
-        // The actual choice
-        int rollRarity = (random.nextInt(0, 100));
+
+        int rollRarity = random.nextInt(0, 100);
         int rarity = (0 <= rollRarity && rollRarity < 50) ? 1 : (50 <= rollRarity && rollRarity < 80) ? 2 : (80 <= rollRarity && rollRarity < 95) ? 3 : 4;
 
-        // Choosing the random card based on what booster we're currently opening for
-        switch (boosterNumber) {
-            case 1:
-                // Check if a random card has that rarity, return it if true. Otherwise, roll again
-                while (true) {
-                    ItemStack card = new ItemStack(whiteEyesBoosterPack.get(random.nextInt(1, whiteEyesBoosterPack.size() + 1)));
-                    if (card.getRarity().equals(cardRarities.get(rarity)))
-                        return card.getItem();
-                }
-            default:
+        // Actually choosing the card
+        while (true) {
+            // Choosing the random card based on what booster we're currently opening
+            ItemStack card;
+            if (boosterNumber == 1)
+                card = new ItemStack(whiteEyesBoosterPack.get(random.nextInt(1, whiteEyesBoosterPack.size() + 1)));
+            else
                 return ModItems.BASE_TRADING_CARD.get(); // Either you are using the Dev Booster Pack, or something went wrong...
+
+            // Check if that card is the rarity we want, otherwise roll the card again
+            if (card.getRarity().equals(cardRarities.get(rarity)))
+                return card.getItem();
         }
     }
 }
