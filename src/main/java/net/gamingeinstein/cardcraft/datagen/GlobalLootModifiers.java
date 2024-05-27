@@ -10,8 +10,8 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 
-public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
-    public ModGlobalLootModifiersProvider(PackOutput output) {
+public class GlobalLootModifiers extends GlobalLootModifierProvider {
+    public GlobalLootModifiers(PackOutput output) {
         super(output, CardCraft.MOD_ID);
     }
 

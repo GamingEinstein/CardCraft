@@ -37,6 +37,7 @@ public class RulebookItem extends Item {
         ItemStack stack = pPlayer.getItemInHand(pUsedHand);
         if (CardCraft.patchouliLoaded && pPlayer instanceof ServerPlayer serverPlayer)
             PatchouliHandler.openBookGUI(serverPlayer);
+            //pPlayer.displayClientMessage(Component.literal("Test"), false); // This is only here to make sure runData works properly, since I have to comment out the previous line for some reason
         else if (!CardCraft.patchouliLoaded && pLevel.isClientSide)
             pPlayer.displayClientMessage(Component.literal("It would appear that Patchouli isn't installed. In order to see the contents of this book, please install Patchouli (version here)"), false);
 

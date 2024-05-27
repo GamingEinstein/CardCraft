@@ -18,6 +18,9 @@ public class ModTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> RNG_ITEMS = tag("rng_items");
+        public static final TagKey<Item> COINS = tag("coins");
+        public static final TagKey<Item> DICE = tag("dice");
         public static final TagKey<Item> BOOSTER_PACKS = tag("booster_packs");
         public static final TagKey<Item> CARDS = tag("cards");
         public static final TagKey<Item> WHITE_EYES_CARDS = tag("white_eyes_cards");

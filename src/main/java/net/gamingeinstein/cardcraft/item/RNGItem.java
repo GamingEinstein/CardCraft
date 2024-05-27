@@ -39,7 +39,7 @@ public class RNGItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown())
             pTooltipComponents.add(Component.literal("This item can " +
-                    (IS_COIN ? "flipped for either Heads or Tails" : "be rolled for a random number between 1 and " + ROLL_MAX) + ". Perfect for deciding on a random outcome!").withStyle(ChatFormatting.DARK_AQUA));
+                    (IS_COIN ? "be flipped for either Heads or Tails" : "be rolled for a random number between 1 and " + ROLL_MAX) + ". Perfect for deciding on a random outcome!").withStyle(ChatFormatting.DARK_AQUA));
         else
             pTooltipComponents.add(Component.literal("Hold " + ChatFormatting.WHITE + "SHIFT" + ChatFormatting.RESET + " for Details").withStyle(ChatFormatting.GRAY));
     }

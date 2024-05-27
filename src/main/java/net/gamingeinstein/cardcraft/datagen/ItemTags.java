@@ -12,15 +12,41 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagGenerator extends ItemTagsProvider {
+public class ItemTags extends ItemTagsProvider {
 
-    public ModItemTagGenerator(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
-                               CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
+    public ItemTags(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
+                    CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
         super(p_275343_, p_275729_, p_275322_, CardCraft.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(ModTags.Items.RNG_ITEMS)
+                .addTag(ModTags.Items.COINS)
+                .addTag(ModTags.Items.DICE);
+
+        this.tag(ModTags.Items.COINS)
+                .add(ModItems.SPECIAL_COIN.get());
+
+        this.tag(ModTags.Items.DICE)
+                .add(ModItems.SPECIAL_D1.get(),
+                        ModItems.WHITE_SPECIAL_D6.get(),
+                        ModItems.LIGHT_GRAY_SPECIAL_D6.get(),
+                        ModItems.GRAY_SPECIAL_D6.get(),
+                        ModItems.BLACK_SPECIAL_D6.get(),
+                        ModItems.BROWN_SPECIAL_D6.get(),
+                        ModItems.RED_SPECIAL_D6.get(),
+                        ModItems.ORANGE_SPECIAL_D6.get(),
+                        ModItems.YELLOW_SPECIAL_D6.get(),
+                        ModItems.LIME_SPECIAL_D6.get(),
+                        ModItems.GREEN_SPECIAL_D6.get(),
+                        ModItems.CYAN_SPECIAL_D6.get(),
+                        ModItems.LIGHT_BLUE_SPECIAL_D6.get(),
+                        ModItems.BLUE_SPECIAL_D6.get(),
+                        ModItems.PURPLE_SPECIAL_D6.get(),
+                        ModItems.MAGENTA_SPECIAL_D6.get(),
+                        ModItems.PINK_SPECIAL_D6.get());
+
         this.tag(ModTags.Items.BOOSTER_PACKS)
                 .add(ModItems.BASE_BOOSTER_PACK.get(),
                         ModItems.WHITE_EYES_BOOSTER_PACK.get());

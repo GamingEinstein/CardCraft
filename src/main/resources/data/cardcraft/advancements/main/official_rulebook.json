@@ -1,0 +1,38 @@
+{
+  "parent": "cardcraft:main/booster_pack",
+  "criteria": {
+    "has_rulebook": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:official_rulebook"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.cardcraft.official_rulebook.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "cardcraft:official_rulebook"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.cardcraft.official_rulebook"
+    }
+  },
+  "requirements": [
+    [
+      "has_rulebook"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

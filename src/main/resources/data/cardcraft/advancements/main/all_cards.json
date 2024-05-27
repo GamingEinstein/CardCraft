@@ -1,0 +1,400 @@
+{
+  "parent": "cardcraft:main/official_rulebook",
+  "criteria": {
+    "has_base": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:base_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_lil_gerald": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:lil_gerald_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_brooding_piglin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:brooding_piglin_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_sharpboned_scrooge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:sharpboned_scrooge_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_stick_man": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:stick_man_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_archer_of_the_swamp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:archer_of_the_swamp_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_nope_the_fish": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:nope_the_fish_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_smoking_launcher": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:smoking_launcher_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_jam_the_frog": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:jam_the_frog_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_frosted_ballman": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:frosted_ballman_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_sonic_screecher": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:sonic_screecher_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_book_of_looting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:book_of_looting_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_cry_of_the_undead": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:cry_of_the_undead_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_iced_marksman": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:iced_marksman_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_notch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:notch_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:apple_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_hungry_camel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:hungry_camel_trading_card"
+            ]
+          }
+        ]
+      }
+    }, "has_working_allay": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:working_allay_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_angry_vex": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:angry_vex_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_heated_jumper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:heated_jumper_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_glow_of_the_deep": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:glow_of_the_deep_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_living_box": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:living_box_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_block_thief": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:block_thief_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_decaying_steed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:decaying_steed_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_magma_cube_token": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:magma_cube_token_trading_card"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.cardcraft.all_cards.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "cardcraft:base_booster_pack"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.cardcraft.all_cards"
+    }
+  },
+  "requirements": [
+    [
+      "has_base"
+    ],
+    [
+      "has_lil_gerald"
+    ],
+    [
+      "has_brooding_piglin"
+    ],
+    [
+      "has_sharpboned_scrooge"
+    ],
+    [
+      "has_stick_man"
+    ],
+    [
+      "has_archer_of_the_swamp"
+    ],
+    [
+      "has_nope_the_fish"
+    ],
+    [
+      "has_smoking_launcher"
+    ],
+    [
+      "has_jam_the_frog"
+    ],
+    [
+      "has_frosted_ballman"
+    ],
+    [
+      "has_sonic_screecher"
+    ],
+    [
+      "has_book_of_looting"
+    ],
+    [
+      "has_cry_of_the_undead"
+    ],
+    [
+      "has_iced_marksman"
+    ],
+    [
+      "has_notch"
+    ],
+    [
+      "has_apple"
+    ],
+    [
+      "has_hungry_camel"
+    ],
+    [
+      "has_working_allay"
+    ],
+    [
+      "has_angry_vex"
+    ],
+    [
+      "has_heated_jumper"
+    ],
+    [
+      "has_glow_of_the_deep"
+    ],
+    [
+      "has_living_box"
+    ],
+    [
+      "has_block_thief"
+    ],
+    [
+      "has_decaying_steed"
+    ],
+    [
+      "has_magma_cube_token"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

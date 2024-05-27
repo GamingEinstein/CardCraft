@@ -9,22 +9,20 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+public class Recipes extends RecipeProvider implements IConditionBuilder {
 
-    public ModRecipeProvider(PackOutput pOutput) {
+    public Recipes(PackOutput pOutput) {
         super(pOutput);
     }
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.OFFICIAL_RULEBOOK.get(), 1)
                 .requires(Items.BOOK)
                 .requires(ModTags.Items.CARDS)
                 .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
                 .save(pWriter);
-
-//        Temporarily disabled until I can figure out why it won't drop iteself when mined
+//        Temporarily disabled until I can figure out why it won't drop itself when mined
 //        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DISPLAY_CASE.get())
 //                .pattern("111")
 //                .pattern("1 1")

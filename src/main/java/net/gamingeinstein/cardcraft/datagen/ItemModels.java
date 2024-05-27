@@ -10,9 +10,9 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItemModelProvider extends ItemModelProvider {
+public class ItemModels extends ItemModelProvider {
 
-    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+    public ItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, CardCraft.MOD_ID, existingFileHelper);
     }
 

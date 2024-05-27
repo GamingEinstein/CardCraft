@@ -13,7 +13,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
-
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CardCraft.MOD_ID);
 
     // Some normal items... probably
@@ -146,7 +145,7 @@ public class ModItems {
     public static final RegistryObject<Item> JAM_THE_FROG_TRADING_CARD = ITEMS.register("jam_the_frog_trading_card",
             () -> new CardItem("jam_the_frog",
                     8,
-                    "Mob - Amphibian",
+                    "Mob - Frog",
                     new int[]{3, 2, 1},
                     "None",
                     "Target one Mob you control. This Mob gains target's ATK/DEF",
@@ -297,8 +296,6 @@ public class ModItems {
                     "None",
                     "TOKEN-EN01",
                     new Item.Properties().rarity(Rarity.COMMON)));
-
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

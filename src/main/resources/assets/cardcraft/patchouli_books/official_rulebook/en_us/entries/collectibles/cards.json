@@ -1,0 +1,11 @@
+{
+  "name": "cardcraft.official_rulebook.entry.cards.name",
+  "icon": "cardcraft:base_trading_card",
+  "category": "cardcraft:collectibles",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "cardcraft.official_rulebook.entry.cards.text"
+    }
+  ]
+}

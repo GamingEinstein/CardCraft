@@ -1,0 +1,48 @@
+{
+  "parent": "cardcraft:main/root",
+  "criteria": {
+    "has_coin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "cardcraft:coins"
+          }
+        ]
+      }
+    },
+    "has_die": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "cardcraft:dice"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.cardcraft.dice_and_coin.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "cardcraft:special_coin"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.cardcraft.dice_and_coin"
+    }
+  },
+  "requirements": [
+    [
+      "has_coin"
+    ],
+    [
+      "has_die"
+    ]
+  ]
+}

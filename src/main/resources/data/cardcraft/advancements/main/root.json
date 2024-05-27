@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "always": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.cardcraft.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "cardcraft:base_trading_card"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancement.cardcraft.root"
+    }
+  },
+  "requirements": [
+    [
+      "always"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

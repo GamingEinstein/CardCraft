@@ -1,0 +1,11 @@
+{
+  "name": "cardcraft.official_rulebook.entry.booster_packs.name",
+  "icon": "cardcraft:base_booster_pack",
+  "category": "cardcraft:collectibles",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "cardcraft.official_rulebook.entry.booster_packs.text"
+    }
+  ]
+}

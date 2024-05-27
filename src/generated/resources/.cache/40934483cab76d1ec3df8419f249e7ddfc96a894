@@ -1,5 +1,8 @@
-// 1.20.1	2024-05-18T21:16:45.325539	Tags for minecraft:item mod id cardcraft
+// 1.20.1	2024-05-19T17:54:33.4862536	Tags for minecraft:item mod id cardcraft
 8b0973158c50948660edb466a99691c31c6d82b6 data/cardcraft/tags/items/booster_packs.json
 6b44ff56429be17b7a245413c9fcfb5813fa1995 data/cardcraft/tags/items/cards.json
+7e4975a9f2f3bf83212de46194175bbb996725ec data/cardcraft/tags/items/coins.json
+457a2c78809f1a77c02b56348394dac376cd2e9f data/cardcraft/tags/items/dice.json
+b40763595038ebd1719497052d471ccb284518e7 data/cardcraft/tags/items/rng_items.json
 610e4b94a38192e85d95a930e1dbc3ddf9485d91 data/cardcraft/tags/items/token_cards.json
 f95165c684364aca49be75f22ca7d60483443052 data/cardcraft/tags/items/white_eyes_cards.json

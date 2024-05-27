@@ -1,0 +1,36 @@
+{
+  "parent": "cardcraft:main/root",
+  "criteria": {
+    "has_booster_pack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "cardcraft:booster_packs"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.cardcraft.booster_pack.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "cardcraft:base_booster_pack"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.cardcraft.booster_pack"
+    }
+  },
+  "requirements": [
+    [
+      "has_booster_pack"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
