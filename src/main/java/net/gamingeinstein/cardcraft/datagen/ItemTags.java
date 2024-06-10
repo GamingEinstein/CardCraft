@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ItemTags extends ItemTagsProvider {
-
     public ItemTags(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
                     CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
         super(p_275343_, p_275729_, p_275322_, CardCraft.MOD_ID, existingFileHelper);
@@ -48,15 +47,15 @@ public class ItemTags extends ItemTagsProvider {
                         ModItems.PINK_SPECIAL_D6.get());
 
         this.tag(ModTags.Items.BOOSTER_PACKS)
-                .add(ModItems.BASE_BOOSTER_PACK.get(),
-                        ModItems.WHITE_EYES_BOOSTER_PACK.get());
+                .add(ModItems.DEV_BOOSTER_PACK.get(),
+                        ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get());
 
         this.tag(ModTags.Items.CARDS)
-                .add(ModItems.BASE_TRADING_CARD.get())
-                .addTag(ModTags.Items.WHITE_EYES_CARDS)
+                .add(ModItems.DEV_TRADING_CARD.get())
+                .addTag(ModTags.Items.LEGEND_OF_WHITE_EYES_CARDS)
                 .addTag(ModTags.Items.TOKEN_CARDS);
 
-        this.tag(ModTags.Items.WHITE_EYES_CARDS)
+        this.tag(ModTags.Items.LEGEND_OF_WHITE_EYES_CARDS)
                 .add(ModItems.LIL_GERALD_TRADING_CARD.get(),
                         ModItems.BROODING_PIGLIN_TRADING_CARD.get(),
                         ModItems.SHARPBONED_SCROOGE_TRADING_CARD.get(),
@@ -73,13 +72,20 @@ public class ItemTags extends ItemTagsProvider {
                         ModItems.NOTCH_TRADING_CARD.get(),
                         ModItems.APPLE_TRADING_CARD.get(),
                         ModItems.HUNGRY_CAMEL_TRADING_CARD.get(),
-                        ModItems.WORKING_ALLAY_TRADING_CARD.get(),
+                        ModItems.CLEANER_ALLAY_TRADING_CARD.get(),
                         ModItems.ANGRY_VEX_TRADING_CARD.get(),
                         ModItems.HEATED_JUMPER_TRADING_CARD.get(),
                         ModItems.GLOW_OF_THE_DEEP_TRADING_CARD.get(),
                         ModItems.LIVING_BOX_TRADING_CARD.get(),
                         ModItems.BLOCK_THIEF_TRADING_CARD.get(),
-                        ModItems.DECAYING_STEED_TRADING_CARD.get());
+                        ModItems.DECAYING_STEED_TRADING_CARD.get(),
+                        ModItems.WILD_FELINE_TRADING_CARD.get());
+                        ModItems.MENACE_OF_THE_STARS_TRADING_CARD.get();
+                        ModItems.REPEATER_CROSSBOW_TRADING_CARD.get();
+                        ModItems.GUIDE_TO_BETTER_FARMING_TRADING_CARD.get();
+                        ModItems.MUSCLE_BUILDER_TRADING_CARD.get();
+                        ModItems.IRON_TOE_BOOTS_TRADING_CARD.get();
+                        ModItems.FEARED_SCREAM_TRADING_CARD.get();
 
         this.tag(ModTags.Items.TOKEN_CARDS)
                 .add(ModItems.MAGMA_CUBE_TOKEN_TRADING_CARD.get());

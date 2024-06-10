@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                         // Normal Things
                         pOutput.accept(ModItems.OFFICIAL_RULEBOOK.get());
                         pOutput.accept(ModBlocks.DISPLAY_CASE.get());
+                        pOutput.accept(ModBlocks.PLAYMAT.get());
                         pOutput.accept(ModItems.SPECIAL_COIN.get());
                         pOutput.accept(ModItems.SPECIAL_D1.get());
                         pOutput.accept(ModItems.WHITE_SPECIAL_D6.get());
@@ -39,17 +40,17 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MAGENTA_SPECIAL_D6.get());
                         pOutput.accept(ModItems.PINK_SPECIAL_D6.get());
                         // Booster Packs
-                        pOutput.accept(ModItems.BASE_BOOSTER_PACK.get());
-                        pOutput.accept(ModItems.WHITE_EYES_BOOSTER_PACK.get());
+                        pOutput.accept(ModItems.DEV_BOOSTER_PACK.get());
+                        pOutput.accept(ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get());
                     })
                     .build());
 
     public static final RegistryObject<CreativeModeTab> CARDCRAFT_CARDS = CREATIVE_MODE_TABS.register("cardcraft_cards",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BASE_TRADING_CARD.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DEV_TRADING_CARD.get()))
                     .title(Component.translatable("creativetab.cardcraft.cards"))
                     .displayItems((pParameters, pOutput) -> {
                         // Legend of White Eyes
-                        pOutput.accept(ModItems.BASE_TRADING_CARD.get());
+                        pOutput.accept(ModItems.DEV_TRADING_CARD.get());
                         pOutput.accept(ModItems.LIL_GERALD_TRADING_CARD.get());
                         pOutput.accept(ModItems.BROODING_PIGLIN_TRADING_CARD.get());
                         pOutput.accept(ModItems.SHARPBONED_SCROOGE_TRADING_CARD.get());
@@ -66,13 +67,20 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.NOTCH_TRADING_CARD.get());
                         pOutput.accept(ModItems.APPLE_TRADING_CARD.get());
                         pOutput.accept(ModItems.HUNGRY_CAMEL_TRADING_CARD.get());
-                        pOutput.accept(ModItems.WORKING_ALLAY_TRADING_CARD.get());
+                        pOutput.accept(ModItems.CLEANER_ALLAY_TRADING_CARD.get());
                         pOutput.accept(ModItems.ANGRY_VEX_TRADING_CARD.get());
                         pOutput.accept(ModItems.HEATED_JUMPER_TRADING_CARD.get());
                         pOutput.accept(ModItems.GLOW_OF_THE_DEEP_TRADING_CARD.get());
                         pOutput.accept(ModItems.LIVING_BOX_TRADING_CARD.get());
                         pOutput.accept(ModItems.BLOCK_THIEF_TRADING_CARD.get());
                         pOutput.accept(ModItems.DECAYING_STEED_TRADING_CARD.get());
+                        pOutput.accept(ModItems.WILD_FELINE_TRADING_CARD.get());
+                        pOutput.accept(ModItems.MENACE_OF_THE_STARS_TRADING_CARD.get());
+                        pOutput.accept(ModItems.REPEATER_CROSSBOW_TRADING_CARD.get());
+                        pOutput.accept(ModItems.GUIDE_TO_BETTER_FARMING_TRADING_CARD.get());
+                        pOutput.accept(ModItems.MUSCLE_BUILDER_TRADING_CARD.get());
+                        pOutput.accept(ModItems.IRON_TOE_BOOTS_TRADING_CARD.get());
+                        pOutput.accept(ModItems.FEARED_SCREAM_TRADING_CARD.get());
                         // Tokens
                         pOutput.accept(ModItems.MAGMA_CUBE_TOKEN_TRADING_CARD.get());
                     })

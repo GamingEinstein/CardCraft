@@ -192,13 +192,14 @@
           }
         ]
       }
-    }, "has_working_allay": {
+    },
+    "has_cleaner_allay": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "cardcraft:working_allay_trading_card"
+              "cardcraft:cleaner_allay_trading_card"
             ]
           }
         ]
@@ -275,21 +276,105 @@
           }
         ]
       }
+    },
+    "has_wild_feline": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:wild_feline_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_menace_of_the_stars": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:menace_of_the_stars_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_repeater_crossbow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:repeater_crossbow_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_guide_to_better_farming": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:guide_to_better_farming_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_muscle_builder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:muscle_builder_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_iron_toe_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:iron_toe_boots_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_feared_scream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:feared_scream_trading_card"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.cardcraft.all_white_eyes_cards.description"
+      "translate": "advancement.cardcraft.all_legend_of_white_eyes_cards.description"
     },
     "frame": "goal",
     "hidden": false,
     "icon": {
-      "item": "cardcraft:white_eyes_booster_pack"
+      "item": "cardcraft:legend_of_white_eyes_booster_pack"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.cardcraft.all_white_eyes_cards"
+      "translate": "advancement.cardcraft.all_legend_of_white_eyes_cards"
     }
   },
   "requirements": [
@@ -342,7 +427,7 @@
       "has_hungry_camel"
     ],
     [
-      "has_working_allay"
+      "has_cleaner_allay"
     ],
     [
       "has_angry_vex"
@@ -361,6 +446,27 @@
     ],
     [
       "has_decaying_steed"
+    ],
+    [
+      "has_wild_feline"
+    ],
+    [
+      "has_menace_of_the_stars"
+    ],
+    [
+      "has_repeater_crossbow"
+    ],
+    [
+      "has_guide_to_better_farming"
+    ],
+    [
+      "has_muscle_builder"
+    ],
+    [
+      "has_iron_toe_boots"
+    ],
+    [
+      "has_feared_scream"
     ]
   ],
   "sends_telemetry_event": true

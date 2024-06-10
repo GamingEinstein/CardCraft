@@ -19,33 +19,33 @@ public class GlobalLootModifiers extends GlobalLootModifierProvider {
     protected void start() {
         // Legend of White Eyes
         // Village Houses
-        add("white_eyes_booster_pack_from_village_desert_house", new AddItemModifier(new LootItemCondition[] {
+        add("legend_of_white_eyes_booster_pack_from_village_desert_house", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_desert_house")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() },
-                ModItems.WHITE_EYES_BOOSTER_PACK.get()));
-        add("white_eyes_booster_pack_from_village_plains_house", new AddItemModifier(new LootItemCondition[] {
+                ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get()));
+        add("legend_of_white_eyes_booster_pack_from_village_plains_house", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() },
-                ModItems.WHITE_EYES_BOOSTER_PACK.get()));
-        add("white_eyes_booster_pack_from_village_savanna_house", new AddItemModifier(new LootItemCondition[] {
+                ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get()));
+        add("legend_of_white_eyes_booster_pack_from_village_savanna_house", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_savanna_house")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() },
-                ModItems.WHITE_EYES_BOOSTER_PACK.get()));
-        add("white_eyes_booster_pack_from_village_snowy_house", new AddItemModifier(new LootItemCondition[] {
+                ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get()));
+        add("legend_of_white_eyes_booster_pack_from_village_snowy_house", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_snowy_house")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() },
-                ModItems.WHITE_EYES_BOOSTER_PACK.get()));
-        add("white_eyes_booster_pack_from_village_taiga_house", new AddItemModifier(new LootItemCondition[] {
+                ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get()));
+        add("legend_of_white_eyes_booster_pack_from_village_taiga_house", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_taiga_house")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build()},
-                ModItems.WHITE_EYES_BOOSTER_PACK.get()));
-        add("white_eyes_booster_pack_from_simple_dungeon", new AddItemModifier(new LootItemCondition[] {
+                ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get()));
+        add("legend_of_white_eyes_booster_pack_from_simple_dungeon", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/simple_dungeon")).build(),
                 LootItemRandomChanceCondition.randomChance(0.65f).build() },
-                ModItems.WHITE_EYES_BOOSTER_PACK.get()));
-        add("white_eyes_booster_pack_from_spawn_bonus_chest", new AddItemModifier(new LootItemCondition[] {
+                ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get()));
+        add("legend_of_white_eyes_booster_pack_from_spawn_bonus_chest", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/spawn_bonus_chest")).build(),
                 LootItemRandomChanceCondition.randomChance(0.75f).build() },
-                ModItems.WHITE_EYES_BOOSTER_PACK.get()));
+                ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK.get()));
     }
 }

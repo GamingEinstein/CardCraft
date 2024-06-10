@@ -23,7 +23,7 @@ public class ModTags {
         public static final TagKey<Item> DICE = tag("dice");
         public static final TagKey<Item> BOOSTER_PACKS = tag("booster_packs");
         public static final TagKey<Item> CARDS = tag("cards");
-        public static final TagKey<Item> WHITE_EYES_CARDS = tag("white_eyes_cards");
+        public static final TagKey<Item> LEGEND_OF_WHITE_EYES_CARDS = tag("legend_of_white_eyes_cards");
         public static final TagKey<Item> TOKEN_CARDS = tag("token_cards");
 
         private static TagKey<Item> tag(String name) {

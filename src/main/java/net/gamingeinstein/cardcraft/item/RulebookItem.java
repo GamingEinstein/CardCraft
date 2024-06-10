@@ -20,16 +20,20 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class RulebookItem extends Item {
+
     public RulebookItem(Properties properties) {
         super(properties.rarity(Rarity.RARE).stacksTo(1));
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        if (Screen.hasShiftDown())
-            pTooltipComponents.add(Component.literal("The All-in-One source for CardCraft! Contains information about getting Booster Packs, Card Information, how to play CardCraft, and more!").withStyle(ChatFormatting.DARK_AQUA));
-        else
-            pTooltipComponents.add(Component.literal("Hold " + ChatFormatting.WHITE + "SHIFT" + ChatFormatting.RESET + " for Details").withStyle(ChatFormatting.GRAY));
+        pTooltipComponents.add(Component.literal("Hold [" + (Screen.hasShiftDown() ? ChatFormatting.WHITE : ChatFormatting.GRAY) + "SHIFT" + ChatFormatting.RESET + "] for Details").withStyle(ChatFormatting.GRAY));
+        if (Screen.hasShiftDown()) {
+            pTooltipComponents.add(Component.translatable("item.cardcraft.official_rulebook.details.line1").withStyle(ChatFormatting.DARK_AQUA));
+            pTooltipComponents.add(Component.translatable("item.cardcraft.official_rulebook.details.line2").withStyle(ChatFormatting.DARK_AQUA));
+            if (!CardCraft.patchouliLoaded)
+                pTooltipComponents.add(Component.translatable("item.cardcraft.official_rulebook.details.patchouli_missing").withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
+        }
     }
 
     @Override
@@ -37,9 +41,9 @@ public class RulebookItem extends Item {
         ItemStack stack = pPlayer.getItemInHand(pUsedHand);
         if (CardCraft.patchouliLoaded && pPlayer instanceof ServerPlayer serverPlayer)
             PatchouliHandler.openBookGUI(serverPlayer);
-            //pPlayer.displayClientMessage(Component.literal("Test"), false); // This is only here to make sure runData works properly, since I have to comment out the previous line for some reason
+            //pPlayer.displayClientMessage(Component.translatable("item.cardcraft.official_rulebook.details.patchouli_installed").withStyle(ChatFormatting.RED, ChatFormatting.BOLD), false); // This is only here to make sure runData works properly, since I have to comment out the previous line for some reason
         else if (!CardCraft.patchouliLoaded && pLevel.isClientSide)
-            pPlayer.displayClientMessage(Component.literal("It would appear that Patchouli isn't installed. In order to see the contents of this book, please install Patchouli (version here)"), false);
+            pPlayer.displayClientMessage(Component.translatable("item.cardcraft.official_rulebook.details.patchouli_missing").withStyle(ChatFormatting.RED, ChatFormatting.BOLD), false);
 
         return new InteractionResultHolder<>(InteractionResult.CONSUME, stack);
     }

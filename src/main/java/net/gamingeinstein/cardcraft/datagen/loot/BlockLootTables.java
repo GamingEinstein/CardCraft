@@ -9,7 +9,6 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.Set;
 
 public class BlockLootTables extends BlockLootSubProvider {
-
     public BlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
@@ -17,6 +16,7 @@ public class BlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.DISPLAY_CASE.get());
+        this.dropSelf(ModBlocks.PLAYMAT.get());
     }
 
     @Override

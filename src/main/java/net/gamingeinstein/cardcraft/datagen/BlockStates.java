@@ -10,7 +10,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 public class BlockStates extends BlockStateProvider {
-
     public BlockStates(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, CardCraft.MOD_ID, exFileHelper);
     }
@@ -19,6 +18,8 @@ public class BlockStates extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlockWithItem(ModBlocks.DISPLAY_CASE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/display_case")));
+        simpleBlockWithItem(ModBlocks.PLAYMAT.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/playmat")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

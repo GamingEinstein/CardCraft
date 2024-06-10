@@ -37,11 +37,11 @@ public class RNGItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        if (Screen.hasShiftDown())
-            pTooltipComponents.add(Component.literal("This item can " +
-                    (IS_COIN ? "be flipped for either Heads or Tails" : "be rolled for a random number between 1 and " + ROLL_MAX) + ". Perfect for deciding on a random outcome!").withStyle(ChatFormatting.DARK_AQUA));
-        else
-            pTooltipComponents.add(Component.literal("Hold " + ChatFormatting.WHITE + "SHIFT" + ChatFormatting.RESET + " for Details").withStyle(ChatFormatting.GRAY));
+        pTooltipComponents.add(Component.literal("Hold [" + (Screen.hasShiftDown() ? ChatFormatting.WHITE : ChatFormatting.GRAY) + "SHIFT" + ChatFormatting.RESET + "] for Details").withStyle(ChatFormatting.GRAY));
+        if (Screen.hasShiftDown()) {
+            pTooltipComponents.add(Component.literal("The perfect item for deciding on random outcomes!").withStyle(ChatFormatting.DARK_AQUA));
+            pTooltipComponents.add(Component.literal("Will roll an outcome " + (IS_COIN ? "as either Heads or Tails" : "between 1 and " + ROLL_MAX)).withStyle(ChatFormatting.DARK_AQUA));
+        }
     }
 
     @Override
@@ -105,7 +105,7 @@ public class RNGItem extends Item {
                 // If the player rolled the 1 in a Million, say the message and give them a Base Trading Card (will probably be removed or modified in the future)
                 if (secretMessage) {
                     pPlayer.displayClientMessage(Component.translatable("item.cardcraft.special_d1.secret_message").withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC), false);
-                    ItemHandlerHelper.giveItemToPlayer(pPlayer, new ItemStack(ModItems.BASE_TRADING_CARD.get()));
+                    ItemHandlerHelper.giveItemToPlayer(pPlayer, new ItemStack(ModItems.DEV_TRADING_CARD.get()));
                 }
             }
         }

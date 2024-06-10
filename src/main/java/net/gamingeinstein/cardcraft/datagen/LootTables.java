@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Set;
 
 public class LootTables {
-
     public static LootTableProvider create(PackOutput output) {
         return new LootTableProvider(output, Set.of(), List.of(
                 new LootTableProvider.SubProviderEntry(BlockLootTables::new, LootContextParamSets.BLOCK)

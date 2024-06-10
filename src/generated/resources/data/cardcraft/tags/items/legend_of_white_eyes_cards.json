@@ -16,12 +16,13 @@
     "cardcraft:notch_trading_card",
     "cardcraft:apple_trading_card",
     "cardcraft:hungry_camel_trading_card",
-    "cardcraft:working_allay_trading_card",
+    "cardcraft:cleaner_allay_trading_card",
     "cardcraft:angry_vex_trading_card",
     "cardcraft:heated_jumper_trading_card",
     "cardcraft:glow_of_the_deep_trading_card",
     "cardcraft:living_box_trading_card",
     "cardcraft:block_thief_trading_card",
-    "cardcraft:decaying_steed_trading_card"
+    "cardcraft:decaying_steed_trading_card",
+    "cardcraft:wild_feline_trading_card"
   ]
 }

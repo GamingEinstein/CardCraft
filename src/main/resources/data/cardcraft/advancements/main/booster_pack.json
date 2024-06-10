@@ -20,7 +20,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "cardcraft:base_booster_pack"
+      "item": "cardcraft:dev_booster_pack"
     },
     "show_toast": true,
     "title": {

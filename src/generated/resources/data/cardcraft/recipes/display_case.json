@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:glass"
+    },
+    "2": {
+      "item": "minecraft:stone"
+    },
+    "3": {
+      "item": "minecraft:item_frame"
+    }
+  },
+  "pattern": [
+    "111",
+    "131",
+    "222"
+  ],
+  "result": {
+    "item": "cardcraft:display_case"
+  },
+  "show_notification": true
+}

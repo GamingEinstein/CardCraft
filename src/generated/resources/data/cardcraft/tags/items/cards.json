@@ -1,7 +1,7 @@
 {
   "values": [
-    "cardcraft:base_trading_card",
-    "#cardcraft:white_eyes_cards",
+    "cardcraft:dev_trading_card",
+    "#cardcraft:legend_of_white_eyes_cards",
     "#cardcraft:token_cards"
   ]
 }

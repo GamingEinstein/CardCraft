@@ -15,41 +15,36 @@ import java.util.List;
 public class CardItem extends Item {
     protected final String CARD_NAME;
     protected final int CARD_NUMBER;
-    protected final boolean IS_SHINY;
-    protected final String CARD_TYPE;
     protected final int[] CARD_STATS;
-    protected final String CARD_COST;
-    protected final String CARD_EFFECT;
-    protected final String CARD_FLAVOR_TEXT;
+    protected final boolean IS_ILLEGAL;
 
-    public CardItem(String cardName, int cardNumber, boolean isShiny, String cardType, @Nullable int[] cardStats, String cardCost, String cardEffect, String cardFlavorText, Properties pProperties) {
+    public CardItem(String cardName, int cardNumber, @Nullable int[] cardStats, boolean isIllegal, Properties pProperties) {
         super(pProperties);
         CARD_NAME = cardName;
         CARD_NUMBER = cardNumber;
-        IS_SHINY = isShiny;
         CARD_STATS = cardStats;
-        CARD_TYPE = cardType;
-        CARD_COST = cardCost;
-        CARD_EFFECT = cardEffect;
-        CARD_FLAVOR_TEXT = cardFlavorText;
+        IS_ILLEGAL = isIllegal;
     }
-    public CardItem(String cardName, int cardNumber, String cardType, int[] cardStats, String cardCost, String cardEffect, String cardFlavorText, Properties pProperties) {
-        this(cardName, cardNumber, false, cardType, cardStats, cardCost, cardEffect, cardFlavorText, pProperties);
+
+    public CardItem(String cardName, int cardNumber, @Nullable int[] cardStats, Properties pProperties) {
+        this(cardName, cardNumber, cardStats, false, pProperties);
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(Component.literal("Hold [" + (Screen.hasShiftDown() ? ChatFormatting.WHITE : ChatFormatting.GRAY) + "SHIFT" + ChatFormatting.RESET + "] for Details").withStyle(ChatFormatting.GRAY));
         if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.literal(CARD_TYPE).withStyle(ChatFormatting.RED));
+            pTooltipComponents.add(Component.translatable("item.cardcraft." + CARD_NAME + "_trading_card.type").withStyle(ChatFormatting.RED));
             if (CARD_STATS != null)
-                pTooltipComponents.add(Component.literal(CARD_STATS[0] + " HP | " + CARD_STATS[1] + "/" + CARD_STATS[2]).withStyle(ChatFormatting.GREEN));
+                pTooltipComponents.add(Component.literal(CARD_STATS[0] + " HP | " + CARD_STATS[1] + " DMG").withStyle(ChatFormatting.GREEN));
             pTooltipComponents.add(Component.literal("==============="));
-            pTooltipComponents.add(Component.literal("Cost: " + CARD_COST).withStyle(ChatFormatting.AQUA));
-            pTooltipComponents.add(Component.literal("Effect: " + CARD_EFFECT).withStyle(ChatFormatting.GOLD));
+            pTooltipComponents.add(Component.translatable("item.cardcraft." + CARD_NAME + "_trading_card.cost").withStyle(ChatFormatting.AQUA));
+            pTooltipComponents.add(Component.translatable("item.cardcraft." + CARD_NAME + "_trading_card.effect").withStyle(ChatFormatting.GOLD));
             pTooltipComponents.add(Component.literal("==============="));
-            pTooltipComponents.add(Component.literal(CARD_FLAVOR_TEXT).withStyle(ChatFormatting.DARK_PURPLE, ChatFormatting.ITALIC));
-        } else
-            pTooltipComponents.add(Component.literal("Hold " + ChatFormatting.WHITE + "SHIFT" + ChatFormatting.RESET + " for Details").withStyle(ChatFormatting.GRAY));
+            pTooltipComponents.add(Component.translatable("item.cardcraft." + CARD_NAME + "_trading_card.flavor_text").withStyle(ChatFormatting.DARK_PURPLE, ChatFormatting.ITALIC));
+            if (IS_ILLEGAL)
+                pTooltipComponents.add(Component.translatable("cardcraft.card_text.illegal_card").withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
+        }
     }
 
     public String getCardName() {
@@ -62,6 +57,6 @@ public class CardItem extends Item {
 
     @Override
     public boolean isFoil(ItemStack pStack) {
-        return pStack.getRarity().equals(Rarity.EPIC) || IS_SHINY;
+        return pStack.getRarity().equals(Rarity.EPIC);
     }
 }

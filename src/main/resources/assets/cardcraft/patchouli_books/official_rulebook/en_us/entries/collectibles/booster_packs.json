@@ -1,6 +1,6 @@
 {
   "name": "cardcraft.official_rulebook.entry.booster_packs.name",
-  "icon": "cardcraft:base_booster_pack",
+  "icon": "cardcraft:dev_booster_pack",
   "category": "cardcraft:collectibles",
   "pages": [
     {

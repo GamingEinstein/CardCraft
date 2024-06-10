@@ -11,13 +11,14 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemModels extends ItemModelProvider {
-
     public ItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, CardCraft.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
+        // There's got to be a simpler way of doing this en-masse
+        // Normal Items
         simpleItem(ModItems.OFFICIAL_RULEBOOK);
         simpleItem(ModItems.SPECIAL_COIN);
         simpleItem(ModItems.SPECIAL_D1);
@@ -38,10 +39,10 @@ public class ItemModels extends ItemModelProvider {
         simpleItem(ModItems.MAGENTA_SPECIAL_D6);
         simpleItem(ModItems.PINK_SPECIAL_D6);
         // Dev
-        simpleItem(ModItems.BASE_TRADING_CARD);
-        simpleItem(ModItems.BASE_BOOSTER_PACK);
+        simpleItem(ModItems.DEV_BOOSTER_PACK);
+        simpleItem(ModItems.DEV_TRADING_CARD);
         // Legend of White Eyes
-        simpleItem(ModItems.WHITE_EYES_BOOSTER_PACK);
+        simpleItem(ModItems.LEGEND_OF_WHITE_EYES_BOOSTER_PACK);
         simpleItem(ModItems.LIL_GERALD_TRADING_CARD);
         simpleItem(ModItems.BROODING_PIGLIN_TRADING_CARD);
         simpleItem(ModItems.SHARPBONED_SCROOGE_TRADING_CARD);
@@ -58,13 +59,20 @@ public class ItemModels extends ItemModelProvider {
         simpleItem(ModItems.NOTCH_TRADING_CARD);
         simpleItem(ModItems.APPLE_TRADING_CARD);
         simpleItem(ModItems.HUNGRY_CAMEL_TRADING_CARD);
-        simpleItem(ModItems.WORKING_ALLAY_TRADING_CARD);
+        simpleItem(ModItems.CLEANER_ALLAY_TRADING_CARD);
         simpleItem(ModItems.ANGRY_VEX_TRADING_CARD);
         simpleItem(ModItems.HEATED_JUMPER_TRADING_CARD);
         simpleItem(ModItems.GLOW_OF_THE_DEEP_TRADING_CARD);
         simpleItem(ModItems.LIVING_BOX_TRADING_CARD);
         simpleItem(ModItems.BLOCK_THIEF_TRADING_CARD);
         simpleItem(ModItems.DECAYING_STEED_TRADING_CARD);
+        simpleItem(ModItems.WILD_FELINE_TRADING_CARD);
+        simpleItem(ModItems.MENACE_OF_THE_STARS_TRADING_CARD);
+        simpleItem(ModItems.REPEATER_CROSSBOW_TRADING_CARD);
+        simpleItem(ModItems.GUIDE_TO_BETTER_FARMING_TRADING_CARD);
+        simpleItem(ModItems.MUSCLE_BUILDER_TRADING_CARD);
+        simpleItem(ModItems.IRON_TOE_BOOTS_TRADING_CARD);
+        simpleItem(ModItems.FEARED_SCREAM_TRADING_CARD);
         // Tokens
         simpleItem(ModItems.MAGMA_CUBE_TOKEN_TRADING_CARD);
     }

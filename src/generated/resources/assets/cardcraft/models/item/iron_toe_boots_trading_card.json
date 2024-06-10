@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cardcraft:item/base_trading_card"
+    "layer0": "cardcraft:item/iron_toe_boots_trading_card"
   }
 }

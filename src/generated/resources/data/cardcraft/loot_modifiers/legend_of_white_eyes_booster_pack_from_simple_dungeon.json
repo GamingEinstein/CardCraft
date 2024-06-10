@@ -3,12 +3,12 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:chests/village/village_savanna_house"
+      "loot_table_id": "minecraft:chests/simple_dungeon"
     },
     {
-      "chance": 0.35,
+      "chance": 0.65,
       "condition": "minecraft:random_chance"
     }
   ],
-  "item": "cardcraft:white_eyes_booster_pack"
+  "item": "cardcraft:legend_of_white_eyes_booster_pack"
 }

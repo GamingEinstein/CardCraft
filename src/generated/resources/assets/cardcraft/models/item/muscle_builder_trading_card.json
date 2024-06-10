@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cardcraft:item/white_eyes_booster_pack"
+    "layer0": "cardcraft:item/muscle_builder_trading_card"
   }
 }

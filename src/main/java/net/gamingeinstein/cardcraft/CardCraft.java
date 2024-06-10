@@ -1,7 +1,8 @@
 package net.gamingeinstein.cardcraft;
 
 import com.mojang.logging.LogUtils;
-import net.gamingeinstein.cardcraft.config.CardCraftConfig;
+import net.gamingeinstein.cardcraft.config.CardCraftConfigClient;
+import net.gamingeinstein.cardcraft.config.CardCraftConfigCommon;
 import net.gamingeinstein.cardcraft.registries.ModBlocks;
 import net.gamingeinstein.cardcraft.registries.ModCreativeModeTabs;
 import net.gamingeinstein.cardcraft.registries.ModItems;
@@ -13,6 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -27,7 +29,8 @@ public class CardCraft {
     public CardCraft() {
         patchouliLoaded = ModList.get().isLoaded("patchouli");
 
-        CardCraftConfig.register(ModLoadingContext.get());
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, CardCraftConfigClient.SPEC, "cardcraft-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CardCraftConfigCommon.SPEC, "cardcraft-common.toml");
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -51,16 +54,18 @@ public class CardCraft {
 
     /*
      *  The ultimate list of things to fix, add, change, etc. Will inevitably grow massive and become unmanageable
-     *  The higher something is on this list, the more important it is. And the reverse is true
-     *  TODO: Have about 50+ cards initially
-     *  TODO: Fix Display Case not dropping itself when mined, even when using the correct tool
-     *  TODO: Make a system that gives players a card with a certain rarity if they open a number of Booster Packs
-     *  TODO: Make a villager or some other mob that can trade individual cards
-     *  TODO: Make an API or something for the rest of the mod to call on when it needs to get a specific Card or Booster Pack instead of rewriting the same set of code repeatedly
-     *  TODO: Add more content besides the cards (advancements, items, structures, mobs)
-     *  TODO: Make rarities configurable (how do config?)
-     *  TODO: Design the actual game (probably won't come until after the cards have been made)
-     *  TODO: Fix Booster Pack getting used in Creative if it's a single item and is used in a slot where cards would go
-     *  TODO: Make Fabric port once the main content of the mod is planned out and exists (also make project multi-loader, which will probably come even later)
+     *  The higher something is on this list, the more important it is, and vice versa
+     *  TODO:
+     *   - Fix Patchouli/EMI not letting runData work when included in the build.gradle file (something about a Mixin error)
+     *   - Make Playmat hitbox rotate when placed
+     *   - Have 100 cards for the first Booster Pack
+     *   - Make a system that gives players a guaranteed rarity if they open a certain number of Booster Packs
+     *   - Make a villager or some other mob that can trade individual cards
+     *   - Make an API or something for the rest of the mod to call on when it needs to get a specific Card or Booster Pack instead of rewriting the same set of code repeatedly
+     *   - Add more content besides the cards (advancements, items, structures, mobs)
+     *   - Make all text translatable instead of mostly hardcoded
+     *   - Design the actual game (probably won't come until after the cards have been made)
+     *   - Fix Booster Pack getting used in Creative if it's a single item and is used in a slot where cards would go
+     *   - Make Fabric port once the main content of the mod is planned out and exists (also make project multi-loader, which will probably come even later)
      */
 }
