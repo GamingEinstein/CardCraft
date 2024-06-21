@@ -39,12 +39,15 @@ public class CardCraft {
     public static final String MOD_ID = "cardcraft";
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public static boolean midnightlibLoaded = false;
     public static boolean patchouliLoaded = false;
 
     public CardCraft() {
         patchouliLoaded = ModList.get().isLoaded("patchouli");
+        midnightlibLoaded = ModList.get().isLoaded("midnightlib");
 
-        MidnightConfig.init(MOD_ID, CardCraftConfig.class);
+        if (midnightlibLoaded)
+            MidnightConfig.init(MOD_ID, CardCraftConfig.class);
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
