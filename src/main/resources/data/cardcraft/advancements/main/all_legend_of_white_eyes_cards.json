@@ -360,6 +360,126 @@
           }
         ]
       }
+    },
+    "has_rotted_gang_brute": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:rotted_gang_brute_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_found_flounder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:found_flounder_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_merchant_from_afar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:merchant_from_afar_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_gust_leaper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:gust_leaper_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_gardener_gloves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:gardener_gloves_trading_card"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "has_protected_bunny": {
+    "trigger": "minecraft:inventory_changed",
+    "conditions": {
+      "items": [
+        {
+          "items": [
+            "cardcraft:protected_bunny_trading_card"
+          ]
+        }
+      ]
+    }
+  },
+  "has_leader_of_the_rotted_gang": {
+    "trigger": "minecraft:inventory_changed",
+    "conditions": {
+      "items": [
+        {
+          "items": [
+            "cardcraft:leader_of_the_rotted_gang_trading_card"
+          ]
+        }
+      ]
+    }
+  },
+  "has_navigation_mate": {
+    "trigger": "minecraft:inventory_changed",
+    "conditions": {
+      "items": [
+        {
+          "items": [
+            "cardcraft:navigation_mate_trading_card"
+          ]
+        }
+      ]
+    }
+  },
+  "has_mossy_beast": {
+    "trigger": "minecraft:inventory_changed",
+    "conditions": {
+      "items": [
+        {
+          "items": [
+            "cardcraft:mossy_beast_trading_card"
+          ]
+        }
+      ]
+    }
+  },
+  "has_training_stick": {
+    "trigger": "minecraft:inventory_changed",
+    "conditions": {
+      "items": [
+        {
+          "items": [
+            "cardcraft:training_stick_trading_card"
+          ]
+        }
+      ]
     }
   },
   "display": {
@@ -467,6 +587,36 @@
     ],
     [
       "has_feared_scream"
+    ],
+    [
+      "has_rotted_gang_brute"
+    ],
+    [
+      "has_found_flounder"
+    ],
+    [
+      "has_merchant_from_afar"
+    ],
+    [
+      "has_gust_leaper"
+    ],
+    [
+      "has_gardener_gloves"
+    ],
+    [
+      "has_protected_bunny"
+    ],
+    [
+      "has_leader_of_the_rotted_gang"
+    ],
+    [
+      "has_navigation_mate"
+    ],
+    [
+      "has_mossy_beast"
+    ],
+    [
+      "has_training_stick"
     ]
   ],
   "sends_telemetry_event": true

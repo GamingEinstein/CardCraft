@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cardcraft:item/merchant_from_afar_trading_card"
+  }
+}

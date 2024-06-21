@@ -39,8 +39,12 @@ public class RNGItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         pTooltipComponents.add(Component.literal("Hold [" + (Screen.hasShiftDown() ? ChatFormatting.WHITE : ChatFormatting.GRAY) + "SHIFT" + ChatFormatting.RESET + "] for Details").withStyle(ChatFormatting.GRAY));
         if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.literal("The perfect item for deciding on random outcomes!").withStyle(ChatFormatting.DARK_AQUA));
-            pTooltipComponents.add(Component.literal("Will roll an outcome " + (IS_COIN ? "as either Heads or Tails" : "between 1 and " + ROLL_MAX)).withStyle(ChatFormatting.DARK_AQUA));
+            pTooltipComponents.add(Component.literal(""));
+            pTooltipComponents.add(Component.translatable("cardcraft.rng_item_text.details").withStyle(ChatFormatting.DARK_AQUA));
+            if (IS_COIN)
+                pTooltipComponents.add(Component.translatable("cardcraft.rng_item_text.details.coin").withStyle(ChatFormatting.DARK_AQUA));
+            else
+                pTooltipComponents.add(Component.translatable("cardcraft.rng_item_text.details.die", ROLL_MAX).withStyle(ChatFormatting.DARK_AQUA));
         }
     }
 

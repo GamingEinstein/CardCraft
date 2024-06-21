@@ -81,6 +81,26 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MUSCLE_BUILDER_TRADING_CARD.get());
                         pOutput.accept(ModItems.IRON_TOE_BOOTS_TRADING_CARD.get());
                         pOutput.accept(ModItems.FEARED_SCREAM_TRADING_CARD.get());
+                        pOutput.accept(ModItems.ROTTED_GANG_BRUTE_TRADING_CARD.get());
+                        pOutput.accept(ModItems.FOUND_FLOUNDER_TRADING_CARD.get());
+                        pOutput.accept(ModItems.MERCHANT_FROM_AFAR_TRADING_CARD.get());
+                        pOutput.accept(ModItems.GUST_LEAPER_TRADING_CARD.get());
+                        pOutput.accept(ModItems.GARDENER_GLOVES_TRADING_CARD.get());
+                        pOutput.accept(ModItems.PROTECTED_BUNNY_TRADING_CARD.get());
+                        pOutput.accept(ModItems.LEADER_OF_THE_ROTTED_GANG_TRADING_CARD.get());
+                        pOutput.accept(ModItems.NAVIGATION_MATE_TRADING_CARD.get());
+                        pOutput.accept(ModItems.MOSSY_BEAST_TRADING_CARD.get());
+                        pOutput.accept(ModItems.TRAINING_STICK_TRADING_CARD.get());
+                        pOutput.accept(ModItems.ROTTED_GANG_MUSCLE_TRADING_CARD.get());
+                        pOutput.accept(ModItems.OUTCAST_RESIDENT_TRADING_CARD.get());
+                        pOutput.accept(ModItems.MYSTERIOUS_MYSTIC_TRADING_CARD.get());
+                        pOutput.accept(ModItems.BLOAT_TRADING_CARD.get());
+                        pOutput.accept(ModItems.LIGHTNING_BOOTS_TRADING_CARD.get());
+                        pOutput.accept(ModItems.OLD_SAGE_TRADING_CARD.get());
+                        pOutput.accept(ModItems.MISGUIDED_HOG_TRADING_CARD.get());
+                        pOutput.accept(ModItems.HUNGRY_BEAST_TRADING_CARD.get());
+                        pOutput.accept(ModItems.POISON_CRAWLER_TRADING_CARD.get());
+                        pOutput.accept(ModItems.HEROBRINE_TRADING_CARD.get());
                         // Tokens
                         pOutput.accept(ModItems.MAGMA_CUBE_TOKEN_TRADING_CARD.get());
                     })

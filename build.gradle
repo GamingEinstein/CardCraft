@@ -93,6 +93,9 @@ repositories {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
     }
+    maven {
+        url = "https://api.modrinth.com/maven"
+    }
 }
 
 dependencies {
@@ -111,6 +114,8 @@ dependencies {
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 
     implementation fg.deobf("curse.maven:jade-324717:${jade_id}")
+
+    implementation fg.deobf("maven.modrinth:midnightlib:${project.midnightlib_version}")
 }
 
 tasks.named('processResources', ProcessResources).configure {

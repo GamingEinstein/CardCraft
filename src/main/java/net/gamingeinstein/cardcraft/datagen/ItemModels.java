@@ -73,6 +73,26 @@ public class ItemModels extends ItemModelProvider {
         simpleItem(ModItems.MUSCLE_BUILDER_TRADING_CARD);
         simpleItem(ModItems.IRON_TOE_BOOTS_TRADING_CARD);
         simpleItem(ModItems.FEARED_SCREAM_TRADING_CARD);
+        simpleItem(ModItems.ROTTED_GANG_BRUTE_TRADING_CARD);
+        simpleItem(ModItems.FOUND_FLOUNDER_TRADING_CARD);
+        simpleItem(ModItems.MERCHANT_FROM_AFAR_TRADING_CARD);
+        simpleItem(ModItems.GUST_LEAPER_TRADING_CARD);
+        simpleItem(ModItems.GARDENER_GLOVES_TRADING_CARD);
+        simpleItem(ModItems.PROTECTED_BUNNY_TRADING_CARD);
+        simpleItem(ModItems.LEADER_OF_THE_ROTTED_GANG_TRADING_CARD);
+        simpleItem(ModItems.NAVIGATION_MATE_TRADING_CARD);
+        simpleItem(ModItems.MOSSY_BEAST_TRADING_CARD);
+        simpleItem(ModItems.TRAINING_STICK_TRADING_CARD);
+        simpleItem(ModItems.ROTTED_GANG_MUSCLE_TRADING_CARD);
+        simpleItem(ModItems.OUTCAST_RESIDENT_TRADING_CARD);
+        simpleItem(ModItems.MYSTERIOUS_MYSTIC_TRADING_CARD);
+        simpleItem(ModItems.BLOAT_TRADING_CARD);
+        simpleItem(ModItems.LIGHTNING_BOOTS_TRADING_CARD);
+        simpleItem(ModItems.OLD_SAGE_TRADING_CARD);
+        simpleItem(ModItems.MISGUIDED_HOG_TRADING_CARD);
+        simpleItem(ModItems.HUNGRY_BEAST_TRADING_CARD);
+        simpleItem(ModItems.POISON_CRAWLER_TRADING_CARD);
+        simpleItem(ModItems.HEROBRINE_TRADING_CARD);
         // Tokens
         simpleItem(ModItems.MAGMA_CUBE_TOKEN_TRADING_CARD);
     }
