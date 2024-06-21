@@ -493,6 +493,126 @@
         ]
       }
     },
+    "has_rotted_gang_muscle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:rotted_gang_muscle_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_outcast_resident": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:outcast_resident_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_mysterious_mystic": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:mysterious_mystic_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_bloat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:bloat_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_lightning_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:lightning_boots_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_old_sage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:old_sage_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_misguided_hog": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:misguided_hog_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_hungry_beast": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:hungry_beast_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_poison_crawler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:poison_crawler_trading_card"
+            ]
+          }
+        ]
+      }
+    },
+    "has_herobrine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cardcraft:herobrine_trading_card"
+            ]
+          }
+        ]
+      }
+    },
     "has_magma_cube_token": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -644,6 +764,36 @@
     ],
     [
       "has_training_stick"
+    ],
+    [
+      "has_rotted_gang_muscle"
+    ],
+    [
+      "has_outcast_resident"
+    ],
+    [
+      "has_mysterious_mystic"
+    ],
+    [
+      "has_bloat"
+    ],
+    [
+      "has_lightning_boots"
+    ],
+    [
+      "has_old_sage"
+    ],
+    [
+      "has_misguided_hog"
+    ],
+    [
+      "has_hungry_beast"
+    ],
+    [
+      "has_poison_crawler"
+    ],
+    [
+      "has_herobrine"
     ],
     [
       "has_magma_cube_token"

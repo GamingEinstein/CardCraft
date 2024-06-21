@@ -24,6 +24,7 @@ import org.slf4j.Logger;
  *   - Fix Patchouli/EMI not letting runData work when included in the build.gradle file (something about a Mixin error)
  *   - Make Playmat hitbox rotate when placed
  *   - Have 100 cards for the first Booster Pack (will be done for the first beta release)
+ *   - Datagen more things (mainly advancements)
  *   - Make a system that gives players a guaranteed rarity if they open a certain number of Booster Packs
  *   - Make a villager or some other mob that can trade individual cards
  *   - Have cards have a right-click that enlarges the card, in order to provide details without using tooltips. Just thought of a super hacky-ish kinda way to do it using GUI screens, since that can allow text in places
