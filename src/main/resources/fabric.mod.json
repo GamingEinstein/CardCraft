@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cardcraft",
+  "version": "${version}",
+  "name": "CardCraft",
+  "description": "Become the Ultimate Collector! Loot, trade, and fight in order to collect over 100 cards!",
+  "authors": [
+    "GamingEinstein"
+  ],
+  "contact": {
+    "website": "https://modrinth.com/mod/cardcraft",
+    "repo": "https://github.com/GamingEinstein/CardCraft"
+  },
+  "license": "MIT",
+  "icon": "assets/cardcraft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.gamingeinstein.cardcraft.client.CardCraftClient"
+    ],
+    "main": [
+      "net.gamingeinstein.cardcraft.CardCraft"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
