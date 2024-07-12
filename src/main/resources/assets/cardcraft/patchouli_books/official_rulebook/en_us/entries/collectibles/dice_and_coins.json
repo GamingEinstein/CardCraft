@@ -1,0 +1,16 @@
+{
+  "name": "cardcraft.official_rulebook.entry.dice_and_coins.name",
+  "icon": "cardcraft:special_d1",
+  "category": "cardcraft:collectibles",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "cardcraft.official_rulebook.entry.dice_and_coins.text"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "cardcraft:white_special_d6",
+      "recipe2": "cardcraft:special_coin"
+    }
+  ]
+}

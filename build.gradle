@@ -4,18 +4,30 @@ plugins {
 }
 
 version = project.mod_version
-group = project.maven_group
+group = project.mod_group
 
 base {
-    archivesName = project.archives_base_name
+    archivesName = "${project.mod_id}-${project.minecraft_version}-${project.mod_version}"
 }
 
 repositories {
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
+    maven {
+        url "https://maven.blamejared.com"
+    }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
 }
 
 dependencies {
@@ -26,6 +38,17 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+    modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}"
+
+    modCompileOnly "dev.emi:emi-fabric:${project.emi_version}:api"
+    modLocalRuntime "dev.emi:emi-fabric:${project.emi_version}"
+
+    modImplementation "curse.maven:jade-324717:${project.jade_id}"
+
+    modApi "fuzs.forgeconfigscreens:forgeconfigscreens-fabric:${fcap_version}"
 }
 
 processResources {
@@ -74,7 +97,7 @@ jar {
 publishing {
     publications {
         create("mavenJava", MavenPublication) {
-            artifactId = project.archives_base_name
+            artifactId = project.mod_name
             from components.java
         }
     }
@@ -86,4 +109,8 @@ publishing {
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
     }
+}
+
+fabricApi {
+    configureDataGeneration()
 }

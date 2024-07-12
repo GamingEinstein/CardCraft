@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cardcraft:block/playmat" },
+    "facing=east": { "model": "cardcraft:block/playmat", "y": 90 },
+    "facing=south": { "model": "cardcraft:block/playmat", "y": 180 },
+    "facing=west": { "model": "cardcraft:block/playmat", "y": 270 }
+  }
+}

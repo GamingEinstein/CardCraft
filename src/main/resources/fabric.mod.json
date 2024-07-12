@@ -8,23 +8,34 @@
     "GamingEinstein"
   ],
   "contact": {
-    "website": "https://modrinth.com/mod/cardcraft",
-    "repo": "https://github.com/GamingEinstein/CardCraft"
+    "homepage": "https://modrinth.com/mod/cardcraft",
+    "sources": "https://github.com/GamingEinstein/CardCraft",
+    "issues": "https://github.com/GamingEinstein/CardCraft/issues"
   },
   "license": "MIT",
-  "icon": "assets/cardcraft/icon.png",
+  "icon": "cardcraft_logo.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "net.gamingeinstein.cardcraft.client.CardCraftClient"
-    ],
     "main": [
       "net.gamingeinstein.cardcraft.CardCraft"
+    ],
+    "client": [
+      "net.gamingeinstein.cardcraft.CardCraftClient"
+    ],
+    "fabric-datagen": [
+      "net.gamingeinstein.cardcraft.CardCraftDataGenerator"
     ]
   },
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric": "*",
+    "fabric-api": "*",
     "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/kEkMdv232X"
+      }
+    }
   }
 }

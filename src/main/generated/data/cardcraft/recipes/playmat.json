@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:blue_carpet"
+    }
+  },
+  "pattern": [
+    "11"
+  ],
+  "result": {
+    "item": "cardcraft:playmat"
+  },
+  "show_notification": true
+}
